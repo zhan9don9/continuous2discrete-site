@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Continuous → Discrete — Dong Zhang</title>
+<meta name="description" content="Plain-English physics notes and DIY experiments: Young’s double slit (asymmetry), Schrödinger’s Cat, birthdays of atoms and photons." />
+<link rel="canonical" href="https://continuous2discrete.org/" />
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+<meta property="og:title" content="Continuous → Discrete — Dong Zhang" />
+<meta property="og:description" content="DIY physics and notes: double-slit asymmetry, Cat, photon birthdays." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/assets/images/og-image.svg" />
+<meta property="og:url" content="https://continuous2discrete.org" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>.btn{ @apply inline-flex items-center px-4 py-2 rounded-2xl shadow-sm hover:shadow transition; } .card{ @apply rounded-2xl shadow p-6 bg-white/80 backdrop-blur; }</style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+<header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b">
+  <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="font-semibold">Continuous → Discrete</a>
+    <nav class="hidden md:flex gap-6">
+      <a href="#projects" class="hover:underline">Projects</a>
+      <a href="#diy" class="hover:underline">DIY</a>
+      <a href="#papers" class="hover:underline">Papers</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="max-w-4xl mx-auto px-4 py-14">
+  <p class="mb-3 text-xs text-slate-500">Language & pedagogy live at <a class="text-sky-700 underline" href="https://ear2eye.org/">ear2eye.org</a></p>
+  <h1 class="text-3xl md:text-5xl font-bold mb-3">Physics in plain English</h1>
+  <p class="text-lg mb-6">Notes and build-it-yourself experiments on how smooth ideas become step-by-step rules—and when to go back.</p>
+  <div class="flex gap-3">
+    <a href="#projects" class="btn bg-slate-900 text-white">See projects</a>
+    <a href="#diy" class="btn bg-white border">DIY steps</a>
+  </div>
+</section>
+
+<section id="projects" class="max-w-4xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6">
+  <article class="card">
+    <h3 class="font-semibold">Young’s Double-Slit: Asymmetry</h3>
+    <p class="text-sm mt-1">Different foil pairs, asymmetric images, and what the slit does inside.</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">Schrödinger’s Cat & “Birthdays”</h3>
+    <p class="text-sm mt-1">A machine-logic read of the Cat and birth as a point for atoms/photons.</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">Hyperbolic Interference</h3>
+    <p class="text-sm mt-1">Notes and figures on pattern shapes and parameter changes.</p>
+  </article>
+</section>
+
+<section id="diy" class="max-w-4xl mx-auto px-4 py-10">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-3">DIY: Build & Test</h2>
+    <ol class="list-decimal pl-6 space-y-2 text-sm">
+      <li>Cut copper/steel foils with factory edges; pair to form a slit.</li>
+      <li>Shine a safe laser through the slit; capture the image on card.</li>
+      <li>Flip the slit; compare left/right asymmetry. Photograph both.</li>
+      <li>Record distance, laser type; share images and notes.</li>
+    </ol>
+    <p class="text-xs text-slate-500 mt-3">Safety first: low-power laser + eye protection.</p>
+  </div>
+</section>
+
+<section id="papers" class="max-w-4xl mx-auto px-4 py-10">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-3">Papers & Preprints</h2>
+    <ul class="list-disc pl-6 text-sm space-y-2">
+      <li>Asymmetric Slit (DIY + notes) — <a class="text-sky-700 underline" href="#">Zenodo</a></li>
+      <li>Hyperbolic Interference — <a class="text-sky-700 underline" href="#">Zenodo/Preprint</a></li>
+      <li>Schrödinger’s Cat — <a class="text-sky-700 underline" href="#">Preprint</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="max-w-4xl mx-auto px-4 py-14">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-2">Contact</h2>
+    <p class="text-sm">hello@continuous2discrete.org</p>
+  </div>
+</section>
+
+<footer class="border-t">
+  <div class="max-w-4xl mx-auto px-4 py-8 text-sm flex items-center justify-between">
+    <span>© <span id="year"></span> Dong Zhang · CC BY 4.0</span>
+    <a href="#" class="hover:underline">Back to top</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
