@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>连续 → 离散 — Dong Zhang</title>
+<meta name="description" content="通俗物理与 DIY 实验：杨氏双缝（非对称）、薛定谔的猫、原子与光子的“生日”。" />
+<link rel="canonical" href="https://continuous2discrete.org/zh/" />
+<link rel="alternate" hreflang="en" href="https://continuous2discrete.org/" />
+<link rel="alternate" hreflang="zh-CN" href="https://continuous2discrete.org/zh/" />
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+<meta property="og:title" content="连续 → 离散 — Dong Zhang" />
+<meta property="og:description" content="DIY 物理与通俗笔记：双缝非对称、薛定谔的猫、光子的“生日”。" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/assets/images/og-image.svg" />
+<meta property="og:url" content="https://continuous2discrete.org/zh/" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>.btn{ @apply inline-flex items-center px-4 py-2 rounded-2xl shadow-sm hover:shadow transition; } .card{ @apply rounded-2xl shadow p-6 bg-white/80 backdrop-blur; }</style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+<header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b">
+  <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/zh/" class="font-semibold">连续 → 离散</a>
+    <nav class="hidden md:flex gap-6">
+      <a href="#projects" class="hover:underline">项目</a>
+      <a href="#diy" class="hover:underline">DIY</a>
+      <a href="#papers" class="hover:underline">论文</a>
+      <a href="#contact" class="hover:underline">联系</a>
+    </nav>
+    <a class="text-sm underline" href="/">English</a>
+  </div>
+</header>
+
+<section class="max-w-4xl mx-auto px-4 py-14">
+  <p class="mb-3 text-xs text-slate-500">语言与教学在 <a class="text-sky-700 underline" href="https://ear2eye.org/">ear2eye.org</a></p>
+  <h1 class="text-3xl md:text-5xl font-bold mb-3">通俗物理 + DIY 实验</h1>
+  <p class="text-lg mb-6">关于“连续 ↔ 离散”的短文与实验：如何把光滑的想法变成一步一步的规则——以及何时需要返回。</p>
+  <div class="flex gap-3">
+    <a href="#projects" class="btn bg-slate-900 text-white">查看项目</a>
+    <a href="#diy" class="btn bg-white border">动手步骤</a>
+  </div>
+</section>
+
+<section id="projects" class="max-w-4xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6">
+  <article class="card">
+    <h3 class="font-semibold">杨氏双缝：非对称</h3>
+    <p class="text-sm mt-1">不同金属箔配对、非对称图像，以及狭缝内发生了什么。</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">薛定谔的猫 与 “生日”</h3>
+    <p class="text-sm mt-1">用机器逻辑重读“猫”，并把原子/光子的“诞生”视为时空中的一个点。</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">双曲干涉</h3>
+    <p class="text-sm mt-1">图样形状与参数变化的随笔与图示。</p>
+  </article>
+</section>
+
+<section id="diy" class="max-w-4xl mx-auto px-4 py-10">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-3">DIY：搭建与测试</h2>
+    <ol class="list-decimal pl-6 space-y-2 text-sm">
+      <li>用工厂切边的铜/钢箔配对成狭缝。</li>
+      <li>用安全激光照射单缝；在卡纸上成像。</li>
+      <li>翻转狭缝；比较左右非对称，并拍照记录。</li>
+      <li>记录距离与激光类型等参数，分享图片与笔记。</li>
+    </ol>
+    <p class="text-xs text-slate-500 mt-3">注意安全：低功率激光 + 眼部防护。</p>
+  </div>
+</section>
+
+<section id="papers" class="max-w-4xl mx-auto px-4 py-10">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-3">论文与预印本</h2>
+    <ul class="list-disc pl-6 text-sm space-y-2">
+      <li>非对称单缝（DIY + 笔记）— <a class="text-sky-700 underline" href="#">Zenodo</a></li>
+      <li>双曲干涉 — <a class="text-sky-700 underline" href="#">Zenodo / Preprint</a></li>
+      <li>薛定谔的猫 — <a class="text-sky-700 underline" href="#">Preprint</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="max-w-4xl mx-auto px-4 py-14">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-2">联系</h2>
+    <p class="text-sm"><a class="text-sky-700 underline" href="mailto:hello@continuous2discrete.org">hello@continuous2discrete.org</a></p>
+  </div>
+</section>
+
+<footer class="border-t">
+  <div class="max-w-4xl mx-auto px-4 py-8 text-sm flex items-center justify-between">
+    <span>© <span id="year"></span> Dong Zhang · CC BY 4.0</span>
+    <a href="#" class="hover:underline">回到顶部</a>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 pb-8 text-xs text-slate-600">
+    语言与教学在 <a class="underline" href="https://ear2eye.org/">ear2eye.org</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
