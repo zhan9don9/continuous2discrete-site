@@ -3,120 +3,242 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Continuous → Discrete — Dong Zhang</title>
-<meta name="description" content="Plain-English physics notes and DIY experiments: Young’s double slit (asymmetry), Schrödinger’s Cat, birthdays of atoms and photons." />
-<link rel="canonical" href="https://continuous2discrete.org/" />
+<title>continuous → discrete — Beginnings</title>
+<meta name="description" content="Simple builds, clear claims. From Young’s double slit to asymmetric slits; from waves to the 'birthdays' of photons and atoms." />
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
-<meta property="og:title" content="Continuous → Discrete — Dong Zhang" />
-<meta property="og:description" content="DIY physics and notes: double-slit asymmetry, Cat, photon birthdays." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="/assets/images/og-image.svg" />
-<meta property="og:url" content="https://continuous2discrete.org" />
-<script src="https://cdn.tailwindcss.com"></script>
-<style>.btn{ @apply inline-flex items-center px-4 py-2 rounded-2xl shadow-sm hover:shadow transition; } .card{ @apply rounded-2xl shadow p-6 bg-white/80 backdrop-blur; }</style>
 <link rel="alternate" hreflang="en" href="https://continuous2discrete.org/" />
 <link rel="alternate" hreflang="zh-CN" href="https://continuous2discrete.org/zh/" />
-
+<meta property="og:title" content="continuous → discrete — Beginnings" />
+<meta property="og:description" content="DIY where possible; proofs where needed. Tiny explainers you can open as you read." />
+<meta property="og:image" content="/assets/images/og-image.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://continuous2discrete.org/" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .card { @apply rounded-2xl border bg-white/80 backdrop-blur p-6; }
+  details > summary { cursor: pointer; }
+  html{scroll-behavior:smooth}
+</style>
 </head>
 <body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+
 <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b">
   <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="/" class="font-semibold">Continuous → Discrete</a>
+    <a href="/" class="font-semibold">continuous → discrete</a>
     <nav class="hidden md:flex gap-6">
+      <a href="#hero" class="hover:underline">Home</a>
       <a href="#projects" class="hover:underline">Projects</a>
-      <a href="#diy" class="hover:underline">DIY</a>
+      <a href="#explainers" class="hover:underline">Explainers</a>
       <a href="#papers" class="hover:underline">Papers</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-      <a class="text-sm underline" href="/zh/">中文</a>
-
+      <a href="#exp-kepler" class="hover:underline">Kepler</a>
+      <a href="https://ear2eye.org/" class="hover:underline">Ear2Eye</a>
+      <a href="/pages/about.html" class="hover:underline">About</a>
     </nav>
   </div>
 </header>
 
-<section class="max-w-4xl mx-auto px-4 py-14">
-  <p class="mb-3 text-xs text-slate-500">Language & pedagogy live at <a class="text-sky-700 underline" href="https://ear2eye.org/">ear2eye.org</a></p>
-  <h1 class="text-3xl md:text-5xl font-bold mb-3">Physics & Math in plain English</h1>
-  <p class="text-lg mb-6">Notes and build-it-yourself experiments on how smooth ideas become step-by-step rules—and when to go back.</p>
-  <div class="flex gap-3">
-    <a href="#projects" class="btn bg-slate-900 text-white">See projects</a>
-    <a href="#diy" class="btn bg-white border">DIY steps</a>
-  </div>
-</section>
+<main class="max-w-4xl mx-auto px-4 py-10 space-y-10">
 
-<section id="projects" class="max-w-4xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6">
-  <article class="card">
-    <h3 class="font-semibold">Young’s Double-Slit: Asymmetry</h3>
-    <p class="text-sm mt-1">Different foil pairs, asymmetric images, and what the slit does inside.</p>
-  </article>
-  <article class="card">
-    <h3 class="font-semibold">Schrödinger’s Cat & “Birthdays”</h3>
-    <p class="text-sm mt-1">A machine-logic read of the Cat and birth as a point for atoms/photons.</p>
-  </article>
-  <article class="card">
-    <h3 class="font-semibold">Hyperbolic Interference</h3>
-    <p class="text-sm mt-1">Notes and figures on pattern shapes and parameter changes.</p>
-  </article>
-</section>
+  <!-- HERO -->
+  <section id="hero" class="card">
+    <h1 class="font-semibold text-xl">Continuous → Discrete</h1>
+    <p class="mt-2">
+      Simple builds, clear claims. From Young’s double slit to asymmetric slits, from waves to the
+      “birthdays” of photons and atoms. DIY where possible; proofs where needed.
+    </p>
+    <p class="mt-2 text-sm">
+      Jump to:
+      <a class="text-sky-700 underline" href="#projects">Projects</a> ·
+      <a class="text-sky-700 underline" href="#papers">Papers</a> ·
+      <a class="text-sky-700 underline" href="#exp-kepler">Why Kepler’s laws aren’t a weekend project</a>
+    </p>
+  </section>
 
-<section id="diy" class="max-w-4xl mx-auto px-4 py-10">
-  <div class="card">
-    <h2 class="text-xl font-semibold mb-3">DIY: Build & Test</h2>
-    <ol class="list-decimal pl-6 space-y-2 text-sm">
-      <li>Cut copper/steel foils with factory edges; pair to form a slit.</li>
-      <li>Shine a safe laser through the slit; capture the image on card.</li>
-      <li>Flip the slit; compare left/right asymmetry. Photograph both.</li>
-      <li>Record distance, laser type; share images and notes.</li>
-    </ol>
-    <p class="text-xs text-slate-500 mt-3">Safety first: low-power laser + eye protection.</p>
-  </div>
-</section>
+  <!-- PROJECTS -->
+  <section id="projects" class="space-y-6">
 
-<section id="papers" class="max-w-4xl mx-auto px-4 py-10">
-  <div class="card">
-    <h2 class="text-xl font-semibold mb-3">Papers & Preprints</h2>
-    <ul class="list-disc pl-6 text-sm space-y-2">
-      <li>Asymmetric Slit (DIY + notes) —
-        <a class="text-sky-700 underline" href="TODO_SLIT_ZENODO"
-           target="_blank" rel="noopener">Zenodo</a>
-      </li>
-      <li>Hyperbolic Interference —
-        <a class="text-sky-700 underline" href="TODO_HYPERBOLIC_ZENODO"
-           target="_blank" rel="noopener">Zenodo / Preprint</a>
-      </li>
-      <li>Schrödinger’s Cat — 
-        <a class="text-sky-700 underline" href="TODO_CAT_PREPRINT"
-           target="_blank" rel="noopener">Preprint</a>
-      </li>
+    <article class="card">
+      <h2 class="font-semibold">Asymmetric Slit (DIY)</h2>
+      <p class="mt-2">
+        A home-build copper–steel single slit with asymmetric edges. What to build, what to measure,
+        and why the fringe tells a discrete story. Includes tooling tips and safety notes.
+      </p>
+      <p class="mt-2 text-sm">
+        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17059754" target="_blank" rel="noopener">Supporting Einstein: Asymmetric Single-Slit Diffraction</a> ·
+        <a class="text-sky-700 underline" href="https://zenodo.org/records/17118247" target="_blank" rel="noopener">DIY Project Supporting Einstein (MIT reply)</a>
+      </p>
+    </article>
+
+    <article class="card">
+      <h2 class="font-semibold">Trilogy of Young’s Experiment</h2>
+      <p class="mt-2">
+        Pre-slit, in-slit, post-slit dynamics of photons and electrons — a trilogy that reframes
+        interference with discrete steps.
+      </p>
+      <p class="mt-2 text-sm">
+        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17118347" target="_blank" rel="noopener">Trilogy of Young’s Double-Slit Experiment</a> ·
+        <a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">On Completing Young’s Double-Slit Experiment</a>
+      </p>
+    </article>
+
+    <article class="card">
+      <h2 class="font-semibold">Hyperbolic Interference & Fringe Count</h2>
+      <p class="mt-2">
+        How a hyperbolic nonlinearity reshapes fringe prediction. Why a simple tweak in the model
+        clarifies stubborn anomalies in count and spacing.
+      </p>
+      <p class="mt-2 text-sm">
+        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">Hyperbolic Nonlinearity & Fringe Count</a>
+      </p>
+    </article>
+
+    <article class="card">
+      <h2 class="font-semibold">Schrödinger’s Cat (3 versions)</h2>
+      <p class="mt-2">
+        A trio of thought-experiments: what “identical atoms” really means, and how discreteness
+        changes the cat’s setup.
+      </p>
+      <p class="mt-2 text-sm">
+        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17138575" target="_blank" rel="noopener">Three Versions of Schrödinger’s Cat</a>
+      </p>
+    </article>
+
+    <article class="card">
+      <h2 class="font-semibold">Birthday of Waves & Photons</h2>
+      <p class="mt-2">
+        Formation moments, Doppler, redshift, and “when” a photon becomes itself. A discrete timeline
+        under a continuous skin.
+      </p>
+      <p class="mt-2 text-sm">
+        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17139252" target="_blank" rel="noopener">The Birthday of Waves and Photons</a>
+      </p>
+    </article>
+
+  </section><!-- /projects -->
+
+  <!-- EXPLAINERS -->
+  <section id="explainers" class="space-y-4">
+
+    <details id="exp-discrete-mimic" class="card">
+      <summary class="font-semibold">How discrete steps mimic wave fringes</summary>
+      <div class="mt-2 text-sm leading-6">
+        A grid of allowed steps plus a simple rule on phase/time can produce familiar bright–dark bands.
+        You don’t need a literal “smeared wave” if your step rule accumulates and cancels in the right places.
+      </div>
+    </details>
+
+    <details id="exp-evidence-rule" class="card">
+      <summary class="font-semibold">What counts as evidence (proof + spine-figure)</summary>
+      <div class="mt-2 text-sm leading-6">
+        Two rails: (1) a spine-figure that shows the whole claim in one clean picture; (2) a proof that any
+        trained reader can check line by line. If either rail fails, the train doesn’t run.
+      </div>
+    </details>
+
+    <!-- Kepler block reused here -->
+    <details id="exp-kepler" class="card" open>
+      <summary class="font-semibold">Kepler — communal data, singular leap; why this isn’t a weekend project</summary>
+      <div class="mt-2 text-sm leading-6">
+        <p><strong>Tycho’s observatory</strong> was a team engine—precision instruments, assistants, and
+        <em>hundreds–thousands</em> planetary positions gathered over years. That communal load made the data.</p>
+
+        <p>Then <strong>one mind</strong>, Johannes Kepler, wrestled those observations for years (geocentric → heliocentric),
+        discarding circles, equants, and ovals until <em>ellipses</em> held and <em>equal areas in equal times</em> stayed constant.
+        This wasn’t a casual, secular side-project; it carried a <strong>sacred charge</strong>—to show a cosmos that does not lie.</p>
+
+        <p><strong>Law 2’s combinatorial bite:</strong> “Equal areas in equal times” couples the <em>time window</em> and the
+        <em>starting phase</em>. With <em>n</em> time marks you don’t do <em>n</em> checks—you face ~<strong>n²</strong> sector
+        comparisons (different starts × equal intervals). Each sector needs <code>r</code>, <code>Δθ</code>, and area
+        <code>½·r²·Δθ</code>. Even if one area takes minutes once <code>r,θ</code> are reduced, the grid of comparisons explodes.</p>
+
+        <hr class="my-3">
+
+        <p><strong>Complexity at a glance</strong></p>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-xs">
+            <thead>
+              <tr class="border-b">
+                <th class="text-left py-1 pr-3">Target</th>
+                <th class="text-left py-1 pr-3">Reasonable data</th>
+                <th class="text-left py-1 pr-3">Per-item cost (by hand)</th>
+                <th class="text-left py-1 pr-3">Pass cost</th>
+                <th class="text-left py-1">Total effort (order)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="py-1 pr-3"><strong>Law 1: ellipse</strong></td>
+                <td class="py-1 pr-3">20–40 key points</td>
+                <td class="py-1 pr-3">10–20 min reduce/pt; 2–4 min residual</td>
+                <td class="py-1 pr-3">~1–2 h per model pass</td>
+                <td class="py-1">~100–300 h across many failed passes</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-1 pr-3"><strong>Law 2: equal areas</strong></td>
+                <td class="py-1 pr-3">24–48 sectors</td>
+                <td class="py-1 pr-3">10–20 min per date for <code>r,θ</code>; 3–6 min per area</td>
+                <td class="py-1 pr-3">~10–20 h per full round</td>
+                <td class="py-1">Multiple rounds; <strong>n²</strong> comparisons</td>
+              </tr>
+              <tr>
+                <td class="py-1 pr-3"><strong>Law 3: P² ∝ a³</strong></td>
+                <td class="py-1 pr-3">5–6 planets</td>
+                <td class="py-1 pr-3">2–5 min per planet (once P,a known)</td>
+                <td class="py-1 pr-3">~15–30 min</td>
+                <td class="py-1">Years upstream to fix P and a</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-3"><strong>He didn’t start with the right laws.</strong> Each wrong model required a full pass across the dataset.
+        At ~1–2 h per pass and dozens of passes, the discarded work alone is <em>tens to 100+ hours</em>.</p>
+
+        <p class="mt-2"><em>Summary:</em> communal observation enabled a singular leap; the motive force ranked above comfort or career—
+        <em>to be right because heaven must be right</em>.</p>
+      </div>
+    </details>
+
+  </section><!-- /explainers -->
+
+  <!-- PAPERS -->
+  <section id="papers" class="card">
+    <h2 class="font-semibold">Papers & Preprints</h2>
+
+    <h3 class="mt-3 font-medium">Discrete Reinterpretation of Young’s Experiment</h3>
+    <ul class="list-disc pl-6 mt-1 text-sm">
+      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118358" target="_blank" rel="noopener">Asymmetric Slit: Experimental Evidence for a Discrete Reinterpretation of Young’s Experiment</a></li>
+      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118347" target="_blank" rel="noopener">Trilogy of Young’s Double-Slit Experiment: Pre-Slit, In-Slit, and Post-Slit Dynamics</a></li>
+      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">On Completing Young’s Double-Slit Experiment: Hyperbolic Nonlinearity and Fringe Count</a></li>
     </ul>
-  </div>
-</section>
 
-<section id="contact" class="max-w-4xl mx-auto px-4 py-14">
-  <div class="card">
-    <h2 class="text-xl font-semibold mb-2">Contact</h2>
-    <p class="text-sm">hello@continuous2discrete.org</p>
-  </div>
-</section>
+    <h3 class="mt-3 font-medium">DIY & Evidence for Einstein</h3>
+    <ul class="list-disc pl-6 mt-1 text-sm">
+      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17059754" target="_blank" rel="noopener">Supporting Einstein: Asymmetric Single-Slit Diffraction from a DIY Copper–Steel Slit</a></li>
+      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118247" target="_blank" rel="noopener">DIY Project Supporting Einstein: Reply to the MIT Team</a></li>
+    </ul>
 
-<footer class="border-t">
+    <h3 class="mt-3 font-medium">Cats, Birthdays, and Redshift</h3>
+    <ul class="list-disc pl-6 mt-1 text-sm">
+      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17138575" target="_blank" rel="noopener">Three Versions of Schrödinger’s Cat</a></li>
+      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17139252" target="_blank" rel="noopener">The Birthday of Waves and Photons: Doppler, Redshift, Lightspeed, and Dimensional Forces</a></li>
+    </ul>
+
+    <p class="mt-4 text-sm"><a class="text-sky-700 underline" href="#">Back to top</a></p>
+  </section>
+
+</main>
+
+<footer class="border-t mt-10">
   <div class="max-w-4xl mx-auto px-4 py-8 text-sm flex items-center justify-between">
     <span>© <span id="year"></span> Dong Zhang · CC BY 4.0</span>
     <a href="#" class="hover:underline">Back to top</a>
   </div>
-
   <div class="max-w-4xl mx-auto px-4 pb-8 text-xs text-slate-600">
-    Language & pedagogy at
-    <a class="underline" href="https://ear2eye.org/">ear2eye.org</a>
+    Language notes at <a class="underline" href="https://ear2eye.org/">ear2eye.org</a>
   </div>
 </footer>
 
-
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
-
-
-
-
-
