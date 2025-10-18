@@ -54,6 +54,157 @@
     </p>
   </section>
 
+<!-- BEGIN banner -->
+<section class="card" role="note" aria-label="cat-paradox-banner">
+  <p class="text-center font-medium">The paradox lives in the <em>lock</em>, not in the cat.</p>
+</section>
+<!-- END banner -->
+
+<section id="cat-logic" class="card">
+  <h2 class="font-semibold">Schrödinger’s Cat: the three logical snags</h2>
+
+  <ol class="mt-2 list-decimal pl-6 text-sm leading-6">
+    <li><strong>Forfeited information.</strong> The box blocks sight, sound, and cues. “Alive &amp; dead” appears only if we
+      choose to <em>not</em> observe until the end. That’s an <em>information rule</em>, not a seen fact.</li>
+
+<li><strong>Start time is fuzzy → probability ill-defined.</strong>
+  Radioactive decay uses <em>p = 1 − e^{-λT}</em>, but only after you fix a clear start and window.
+  If the source has been running before the lid closes, you must condition on “no decay yet.”
+  Without a well-defined <em>start</em> and <em>duration</em>, even “50%” has no logical footing.
+</li>
+<p class="mt-2 text-xs text-slate-600">
+  Note: in an ideal exponential process the hazard is memoryless, but the <em>reported</em> probability still depends on the
+  chosen window and detector settings (thresholds, dead-time). No window ⇒ no probability.
+</p>
+
+    <li><strong>“Repeatable” means what?</strong> You can’t reset the same nucleus with the same micro-history.
+      In ideal theory, radioactive decay is <em>memoryless</em> (each trial has the same statistics),
+      but a single cat-in-a-box run is not the <em>same state</em> twice.
+      You’re not stepping into the exact same river—only the same kind of river.</li>
+  </ol>
+
+  <details class="mt-3">
+    <summary class="font-medium">Why this matters for “superposition”</summary>
+    <p class="mt-2 text-sm">
+      The famous line—“cat both alive and dead”—comes from (1) sealing information, plus (2) a fuzzy start, plus (3) treating
+      one-off trials as clones. It’s cleaner to say the setup tests our <em>rules for observation</em> and the
+      <em>measurement cut</em>, not that nature makes macroscopic live-and-dead animals.
+    </p>
+  </details>
+
+  <p class="mt-3 text-sm">
+    Spine idea: draw the object chain (source→counter→trigger→vial→cat), show two branches (decay / no-decay),
+    and put a lock icon over the box until “open.” The paradox lives in the lock.
+  </p>
+</section>
+
+<section id="cat-logic" class="card">
+  <h2 class="font-semibold">Schrödinger’s Cat: the three logical snags</h2>
+  <ol class="mt-2 list-decimal pl-6 text-sm leading-6">
+    <li><strong>Forfeited information.</strong> The box blocks sight, sound, and cues. “Alive &amp; dead” appears only if we
+      choose to <em>not</em> observe until the end. That’s an <em>information rule</em>, not a seen fact.</li>
+
+    <li><strong>Start time is fuzzy → probability ill-defined.</strong>
+      Radioactive decay uses <em>p = 1 − e^{-λT}</em>, but only after a clear <em>start</em> <span class="whitespace-nowrap">(t₀)</span> and <em>window</em> <span class="whitespace-nowrap">(T)</span> are fixed.
+      If the source existed before t₀, you must condition on “no decay yet.” Without a well-defined t₀ and T, even “50%” has no footing.</li>
+
+    <li><strong>“Repeatable” means what?</strong> You can’t reset the <em>same nucleus + same micro-history</em>.
+      In theory decay is memoryless (same statistics), but a single box trial is not the <em>same state</em> twice:
+      you sample the same kind of river, not the exact river.</li>
+  </ol>
+
+  <details class="mt-3">
+    <summary class="font-medium">Why this isn’t great for “superposition”</summary>
+    <p class="mt-2 text-sm">
+      The famous line—“cat both alive and dead”—comes from (1) sealing information, plus (2) a fuzzy start/ill-posed probability,
+      plus (3) treating one-offs as clones. It’s cleaner to say the setup tests our <em>rules for observation</em> and the
+      <em>measurement cut</em>, not that nature makes macroscopic live-and-dead animals.
+    </p>
+  </details>
+</section>
+
+<figure class="card mt-6" id="cat-spine">
+  <figcaption class="font-medium">Spine: two branches, locked until open</figcaption>
+  <svg viewBox="0 0 760 160" width="100%" height="160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="source→counter→relay→hammer→vial→cat, two branches, lock over box">
+    <g fill="none" stroke="#334155" stroke-width="2">
+      <rect x="20" y="60" width="100" height="40" rx="8"/><text x="70" y="85" text-anchor="middle" font-size="12" fill="#334155">Nucleus</text>
+      <rect x="150" y="60" width="100" height="40" rx="8"/><text x="200" y="85" text-anchor="middle" font-size="12" fill="#334155">Detector</text>
+      <rect x="280" y="60" width="100" height="40" rx="8"/><text x="330" y="85" text-anchor="middle" font-size="12" fill="#334155">Relay</text>
+      <rect x="410" y="60" width="100" height="40" rx="8"/><text x="460" y="85" text-anchor="middle" font-size="12" fill="#334155">Hammer</text>
+      <rect x="540" y="60" width="100" height="40" rx="8"/><text x="590" y="85" text-anchor="middle" font-size="12" fill="#334155">Vial</text>
+      <rect x="670" y="60" width="70" height="40" rx="8"/><text x="705" y="85" text-anchor="middle" font-size="12" fill="#334155">Cat</text>
+    </g>
+    <g stroke="#334155" stroke-width="2" marker-end="url(#a)">
+      <line x1="120" y1="80" x2="150" y2="80"/>
+      <line x1="250" y1="80" x2="280" y2="80"/>
+      <line x1="380" y1="80" x2="410" y2="80"/>
+      <line x1="510" y1="80" x2="540" y2="80"/>
+      <line x1="640" y1="80" x2="670" y2="80"/>
+    </g>
+    <g stroke="#64748b" stroke-dasharray="4 4" marker-end="url(#a)">
+      <line x1="70" y1="60" x2="70" y2="30"/>
+      <line x1="70" y1="30" x2="705" y2="30"/>
+    </g>
+    <text x="705" y="26" text-anchor="end" font-size="11" fill="#64748b">no-decay branch (intact, alive)</text>
+    <g stroke="#0ea5e9" marker-end="url(#a)">
+      <line x1="70" y1="100" x2="70" y2="130"/>
+      <line x1="70" y1="130" x2="705" y2="130"/>
+    </g>
+    <text x="705" y="146" text-anchor="end" font-size="11" fill="#0ea5e9">decay branch (break, dead)</text>
+    <g>
+      <rect x="140" y="44" width="520" height="72" rx="10" fill="none" stroke="#94a3b8" stroke-dasharray="6 6"/>
+      <path d="M420 50 a14 14 0 0 1 28 0 v14 h-28z" fill="none" stroke="#94a3b8" stroke-width="2"/>
+      <rect x="416" y="64" width="36" height="22" rx="4" fill="none" stroke="#94a3b8" stroke-width="2"/>
+      <circle cx="434" cy="75" r="2" fill="#94a3b8"/>
+      <text x="434" y="104" text-anchor="middle" font-size="11" fill="#94a3b8">locked until open</text>
+    </g>
+    <defs>
+      <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 z" fill="#334155"/>
+      </marker>
+    </defs>
+  </svg>
+</figure>
+
+
+<section id="machine-solo" class="card">
+  <h2 class="font-semibold">What the machine would do on its own</h2>
+  <p class="mt-2 text-sm">
+    Given only the classic description of Schrödinger’s Cat, the machine would independently derive and present the following,
+    without extra assumptions or prompts:
+  </p>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li><strong>Minimal object list:</strong> box, nucleus, detector, relay, actuator, vial, cat — nothing else.</li>
+    <li><strong>Information lock:</strong> the paradox lives in the rule to forfeit observation (sealed box), not in a visible fact.</li>
+    <li><strong>Start-time discipline:</strong> fix start <em>t₀</em> and window <em>T</em>; otherwise “50%” is ill-posed.</li>
+    <li><strong>Probability in place:</strong> use <em>p = 1 − e^{-λT}</em> only after <em>t₀</em>, <em>T</em>, and detector settings are defined.</li>
+    <li><strong>Repeatability clarified:</strong> exact trial ≠ repeatable; only the procedure/statistics are repeatable.</li>
+    <li><strong>Measurement cut:</strong> pick one cut (nucleus/detector/cat/observer) and argue consistently.</li>
+    <li><strong>Decoherence note:</strong> macroscopic superpositions vanish rapidly in normal environments (stated as a caveat, not a crutch).</li>
+    <li><strong>Spine figure:</strong> a two-branch chain (decay / no-decay) locked until open, labels matching the object list.</li>
+    <li><strong>Logic audit checklist:</strong> the 10-point pass/fail list for any “thinking machine.”</li>
+  </ul>
+  <p class="mt-3 text-sm">
+    In short: surface the information lock, the clock discipline, and the meaning of repeatability, and ship them as a clean,
+    checkable package (text + figure + audit list) under your name.
+  </p>
+</section>
+
+
+
+
+<section id="repeatable-note" class="card">
+  <h3 class="font-semibold">What “repeatable” should mean</h3>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li><strong>Exact repeat:</strong> same nucleus + same micro-history → impossible.</li>
+    <li><strong>Procedure repeat:</strong> same kind of source, same window, same detector → possible.</li>
+    <li><strong>Statistics repeat:</strong> distributions match across many runs → the goal.</li>
+    <li>Define <em>t₀</em> (start) and <em>T</em> (window); condition on “no decay yet.”</li>
+    <li>Report <em>p = 1 − e^{-λT}</em> only after <em>T</em> and detector settings (threshold, dead-time) are fixed.</li>
+    <li><em>No window ⇒ no probability.</em></li>
+  </ul>
+</section>
+
   <!-- PROJECTS -->
   <section id="projects" class="space-y-6">
 
