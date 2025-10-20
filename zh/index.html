@@ -1,107 +1,452 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>连续 → 离散 — Dong Zhang</title>
-<meta name="description" content="通俗物理与 DIY 实验：杨氏双缝（非对称）、薛定谔的猫、原子与光子的“生日”。" />
-<link rel="canonical" href="https://continuous2discrete.org/zh/" />
+<title>连续 → 离散 — 起点</title>
+<meta name="description" content="从杨氏双缝到非对称狭缝；从波到“光子与原子生日”。能动手就动手；该证明就证明。" />
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
 <link rel="alternate" hreflang="en" href="https://continuous2discrete.org/" />
 <link rel="alternate" hreflang="zh-CN" href="https://continuous2discrete.org/zh/" />
-<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
-<meta property="og:title" content="连续 → 离散 — Dong Zhang" />
-<meta property="og:description" content="DIY 物理与通俗笔记：双缝非对称、薛定谔的猫、光子的“生日”。" />
-<meta property="og:type" content="website" />
+<meta property="og:title" content="连续 → 离散 — 起点" />
+<meta property="og:description" content="能动手就动手；该证明就证明。阅读中可随时打开的小图与小证。" />
 <meta property="og:image" content="/assets/images/og-image.svg" />
+<meta property="og:type" content="website" />
 <meta property="og:url" content="https://continuous2discrete.org/zh/" />
 <script src="https://cdn.tailwindcss.com"></script>
-<style>.btn{ @apply inline-flex items-center px-4 py-2 rounded-2xl shadow-sm hover:shadow transition; } .card{ @apply rounded-2xl shadow p-6 bg-white/80 backdrop-blur; }</style>
-  <link rel="canonical" href="https://continuous2discrete.org/zh/" />
-<link rel="alternate" hreflang="en" href="https://continuous2discrete.org/" />
-<link rel="alternate" hreflang="zh-CN" href="https://continuous2discrete.org/zh/" />
-
+<style>
+  .card { @apply rounded-2xl border bg-white/80 backdrop-blur p-6; }
+  details > summary { cursor: pointer; }
+  html { scroll-behavior:smooth }
+</style>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+<body class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100 text-slate-800">
+
 <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b">
   <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="/zh/" class="font-semibold">连续 → 离散</a>
+    <p class="text-xl font-bold bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent">连续 → 离散</p>
     <nav class="hidden md:flex gap-6">
+      <a href="#hero" class="hover:underline">首页</a>
       <a href="#projects" class="hover:underline">项目</a>
-      <a href="#diy" class="hover:underline">DIY</a>
+      <a href="#explainers" class="hover:underline">讲解</a>
       <a href="#papers" class="hover:underline">论文</a>
-      <a href="#contact" class="hover:underline">联系</a>
+      <a href="#exp-kepler" class="hover:underline">开普勒</a>
+      <a href="#ether-photons" class="hover:underline">以太与光子</a>
+      <a href="#mit-note" class="hover:underline">MIT</a>
+      <a href="https://ear2eye.org/" class="hover:underline">耳到眼</a>
+      <a href="/pages/about.html" class="hover:underline">关于</a>
+      <a href="/" class="hover:underline">EN</a>
     </nav>
-    <a class="text-sm underline" href="/">English</a>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 pb-8 text-l font-bold text-slate-600">
+    语言相关在 <a class="underline" href="https://ear2eye.org/">ear2eye.org</a>
   </div>
 </header>
 
-<section class="max-w-4xl mx-auto px-4 py-14">
-  <p class="mb-3 text-xs text-slate-500">语言与教学在 <a class="text-sky-700 underline" href="https://ear2eye.org/">ear2eye.org</a></p>
-  <h1 class="text-3xl md:text-5xl font-bold mb-3">通俗物理 + DIY 实验</h1>
-  <p class="text-lg mb-6">关于“连续 ↔ 离散”的短文与实验：如何把光滑的想法变成一步一步的规则——以及何时需要返回。</p>
-  <div class="flex gap-3">
-    <a href="#projects" class="btn bg-slate-900 text-white">查看项目</a>
-    <a href="#diy" class="btn bg-white border">动手步骤</a>
-  </div>
+<main class="max-w-4xl mx-auto px-4 py-10 space-y-10">
+
+<section id="atoms-not-identical" class="card">
+  <h1 class="font-semibold text-xl">原子并不相同（非“完全相同”）：对“薛定谔的猫”的完整解读</h1>
+  <ol class="mt-3 list-decimal pl-6 text-sm leading-6 space-y-2">
+    <li>
+      <strong>经典设定：薛定谔的猫。</strong>
+      <div class="mt-1 text-slate-800">密闭盒子把放射源、致命机构与猫连在一起。</div>
+      <div class="mt-1"><em>提示 0 —— “第一次衰变”才是主角。</em> 实验实际在检测“第一次衰变”。若强调“第一次”，就已经在逻辑上承认原子彼此不同：只需一个盖革计数器（数到/没数到），并不需要真的用猫来显示“生或死”。</div>
+    </li>
+
+    <li>
+      <strong>爱因斯坦的变体。</strong>
+      <div class="mt-1"><em>提示 1 —— 放弃信息。</em> 盒子不透明且隔音。“又活又死”只在我们选择直到最后都<strong>不观察</strong>时才出现——这是<strong>信息规则</strong>，不是看见的事实。于是它更像<strong>“盲聋物理学家”的猫</strong>。</div>
+      <div class="mt-1"><em>提示 2 —— 视觉与听觉线索很重要。</em> 在“爆炸”版本里，光与声在涉及猫之前就已标出过程；猫并非必要：在“活或死”之前，已可问计数器/锤/瓶/炸药是否动作。一个计数器足够。</div>
+    </li>
+
+    <li>
+      <strong>“盲聋物理学家”的盖革计数器。</strong>
+      <div class="mt-1"><em>提示 3 —— 可行，因此不纯粹是思想实验。</em> 不需要“以光速行驶的火车”之类设定，这样的装置<strong>可以实际搭建</strong>；无需牵涉或伤害动物。</div>
+    </li>
+
+    <li>
+      <strong>“50%”须在起点与窗口固定后才有意义。</strong>
+      <div class="mt-1"><em>提示 4 —— 先定 <strong>起点</strong>(t₀) 与 <strong>窗口</strong>(T)。</em> 否则连“50%”都缺少逻辑基础，尤其当人们把原子当“完全相同”时。</div>
+    </li>
+
+    <li>
+      <strong>主题其实是“第一次衰变（或其探测）”。</strong>
+      <div class="mt-1"><em>提示 5 —— “极少量”前提含糊。</em> 先准备许多原子再用“越多 ⇒ 越可能在一小时内衰变”来推理，改变了研究对象；整条链由<strong>第一次衰变</strong>触发。</div>
+    </li>
+
+    <li>
+      <strong>第三版：只用<strong>一个</strong>放射性原子。</strong>
+      <div class="mt-1"><em>提示 6 —— 这时可算思想实验，但思想仍失准。</em> 单原子时，等待可能很长——对思想实验无碍。但若不知道原子何时生成、试验何时开始，就不知道要等多久；没有 t₀，试验可“无限期”拖延。</div>
+    </li>
+
+    <li>
+      <strong>校正版：精算师之猫。</strong>
+      <div class="mt-1"><em>提示 7 —— 明确起点、窗口，并进行多次试验。</em> 保险保单是受控试验：生日已知；保单有明确生效日；单个理赔无意义，但<strong>大量保单</strong>带来稳定统计。</div>
+    </li>
+
+    <li>
+      <strong>“不能两次踏入同一条河”。</strong>
+      <div class="mt-1"><em>提示 8 —— “可重复”的正确含义。</em> 精确重复（同一原子 + 同一微观历史）不可能。应重复<strong>流程</strong>以获得可比统计；不要假装微观状态相同。</div>
+    </li>
+
+    <li>
+      <strong>同位素的原子也<strong>不</strong>相同。</strong>
+      <div class="mt-1"><em>提示 9 —— “非同一性”是核心。</em> 即便质子与中子个数相同，原子也彼此不同。把许多原子当成一个平滑物体会<strong>模糊</strong>这些差异并抹去各自的电磁场。原子总数有限，“相同”只是建模方便。</div>
+    </li>
+  </ol>
 </section>
 
-<section id="projects" class="max-w-4xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6">
+<!-- HERO -->
+<section id="hero" class="card">
+  <h1 class="font-semibold text-xl">连续 → 离散</h1>
+  <p class="mt-2">从杨氏双缝到非对称狭缝，从波到“光子与原子生日”。能动手就动手；该证明就证明。</p>
+  <p class="mt-2 text-sm">
+    快速到达：
+    <a class="text-sky-700 underline" href="#projects">项目</a> ·
+    <a class="text-sky-700 underline" href="#papers">论文</a> ·
+    <a class="text-sky-700 underline" href="#exp-kepler">为何开普勒定律不是“周末项目”</a>
+  </p>
+</section>
+
+<!-- banner -->
+<section class="card bg-gradient-to-r from-amber-50 to-rose-50" role="note" aria-label="cat-paradox-banner">
+  <p class="text-center font-medium">悖论来自<strong>上锁</strong>，不是来自猫。</p>
+</section>
+
+<section id="cat-logic" class="card">
+  <h2 class="font-semibold">“薛定谔的猫”：三个逻辑卡点</h2>
+  <ol class="mt-2 list-decimal pl-6 text-sm leading-6">
+    <li><strong>放弃信息。</strong> 盒子屏蔽光、声与其他线索。“又活又死”只在我们直到最后都不观察时才出现——这是<strong>信息规则</strong>，不是看见的事实。</li>
+    <li><strong>起点模糊 ⇒ 概率未定义。</strong> 衰变概率用 <em>p = 1 − e^{-λT}</em>，但仅在明确 <em>t₀</em> 与 <em>T</em> 之后。</li>
+    <li><strong>“可重复”到底指什么？</strong> 无法复位到<strong>同一原子 + 同一微观历史</strong>；只能重复流程、比对统计。</li>
+  </ol>
+  <details class="mt-3">
+    <summary class="font-medium">为何不适合作为“叠加”的招牌</summary>
+    <p class="mt-2 text-sm">它主要考验我们对<strong>观测规则</strong>与<strong>割裂位置</strong>的约定，而不是自然会生成宏观“生-死并存”。</p>
+  </details>
+</section>
+
+<figure class="card mt-6" id="cat-spine">
+  <figcaption class="font-medium">主链：两条分支，打开之前信息上锁</figcaption>
+  <!-- 与英文版相同的 SVG 示意图 -->
+  <svg viewBox="0 0 760 160" width="100%" height="160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="source→counter→relay→hammer→vial→cat, two branches, lock over box">
+    <g fill="none" stroke="#334155" stroke-width="2">
+      <rect x="20" y="60" width="100" height="40" rx="8"/><text x="70" y="85" text-anchor="middle" font-size="12" fill="#334155">Nucleus</text>
+      <rect x="150" y="60" width="100" height="40" rx="8"/><text x="200" y="85" text-anchor="middle" font-size="12" fill="#334155">Detector</text>
+      <rect x="280" y="60" width="100" height="40" rx="8"/><text x="330" y="85" text-anchor="middle" font-size="12" fill="#334155">Relay</text>
+      <rect x="410" y="60" width="100" height="40" rx="8"/><text x="460" y="85" text-anchor="middle" font-size="12" fill="#334155">Hammer</text>
+      <rect x="540" y="60" width="100" height="40" rx="8"/><text x="590" y="85" text-anchor="middle" font-size="12" fill="#334155">Vial</text>
+      <rect x="670" y="60" width="70" height="40" rx="8"/><text x="705" y="85" text-anchor="middle" font-size="12" fill="#334155">Cat</text>
+    </g>
+    <g stroke="#334155" stroke-width="2" marker-end="url(#a)">
+      <line x1="120" y1="80" x2="150" y2="80"/>
+      <line x1="250" y1="80" x2="280" y2="80"/>
+      <line x1="380" y1="80" x2="410" y2="80"/>
+      <line x1="510" y1="80" x2="540" y2="80"/>
+      <line x1="640" y1="80" x2="670" y2="80"/>
+    </g>
+    <g stroke="#64748b" stroke-dasharray="4 4" marker-end="url(#a)">
+      <line x1="70" y1="60" x2="70" y2="30"/>
+      <line x1="70" y1="30" x2="705" y2="30"/>
+    </g>
+    <text x="705" y="26" text-anchor="end" font-size="11" fill="#64748b">no-decay branch (intact, alive)</text>
+    <g stroke="#0ea5e9" marker-end="url(#a)">
+      <line x1="70" y1="100" x2="70" y2="130"/>
+      <line x1="70" y1="130" x2="705" y2="130"/>
+    </g>
+    <text x="705" y="146" text-anchor="end" font-size="11" fill="#0ea5e9">decay branch (break, dead)</text>
+    <g>
+      <rect x="140" y="44" width="520" height="72" rx="10" fill="none" stroke="#94a3b8" stroke-dasharray="6 6"/>
+      <path d="M420 50 a14 14 0 0 1 28 0 v14 h-28z" fill="none" stroke="#94a3b8" stroke-width="2"/>
+      <rect x="416" y="64" width="36" height="22" rx="4" fill="none" stroke="#94a3b8" stroke-width="2"/>
+      <circle cx="434" cy="75" r="2" fill="#94a3b8"/>
+      <text x="434" y="104" text-anchor="middle" font-size="11" fill="#94a3b8">locked until open</text>
+    </g>
+    <defs>
+      <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 z" fill="#334155"/>
+      </marker>
+    </defs>
+  </svg>
+</figure>
+
+<section id="repeatable-note" class="card">
+  <h3 class="font-semibold">“可重复”的正确含义</h3>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li><strong>精确重复：</strong>同一原子 + 同一微观历史 → 不可能。</li>
+    <li><strong>流程重复：</strong>相同来源、相同窗口、相同探测器 → 可能。</li>
+    <li><strong>统计重复：</strong>多次运行的分布一致 → 目标。</li>
+    <li>先定义 <em>t₀</em>（起点）与 <em>T</em>（窗口）；以前“未衰变”为条件。</li>
+    <li>只有在明确 <em>T</em> 与探测器设置（阈值、死区）后，才报告 <em>p = 1 − e^{-λT}</em>。</li>
+    <li><em>无窗口 ⇒ 无概率。</em></li>
+  </ul>
+</section>
+
+<section class="card bg-gradient-to-r from-sky-50 to-indigo-50" role="note" aria-label="cont-vs-discrete-banner">
+  <p class="text-center font-medium">连续数学画的是地图；世界是由“块”构成的。把它当计算工具，不要当作原子不存在的证明。</p>
+</section>
+
+<section id="cont-useful-fiction" class="card">
+  <h2 class="font-semibold">连续模型：有用的虚构</h2>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li><strong>地图，不是领土：</strong> 光滑曲线与微分方程是我们用来计算的叙述。</li>
+    <li><strong>多数时候够用：</strong> 基于它们的数值计算在许多场景下准确甚至精确。</li>
+    <li><strong>但会抹平“颗粒”：</strong> 它们模糊原子之间的差异，并把每个原子的场平均掉。</li>
+    <li><strong>承诺有限：</strong> 精确未来需要完美初值；我们从无此物——只能得到范围与趋势。</li>
+  </ul>
+  <p class="mt-2 text-xs text-slate-600">一句话：连续世界是一种计算语言；离散世界才是世界本身。</p>
+</section>
+
+<section id="where-breaks" class="card">
+  <h2 class="font-semibold">光滑叙述最先失效的地方</h2>
+  <p class="mt-2 text-sm">当“原子之间大多是空的”，或变化太陡峭以至于“抹平”不诚实时，失败出现得最快。这就是<strong>空气动力学</strong>为何是热点。</p>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li><strong>稀薄空气 / 高速：</strong> 碰撞更稀 → 抹平会说谎（高空、再入、超高超前缘）。</li>
+    <li><strong>边缘与尾迹：</strong> 机翼后、拐角处的流动撕成团与涡；单一光滑场无法跟踪。</li>
+    <li><strong>激波：</strong> 压强/温度跃迁——曲线想要斜率，而世界直接跨步。</li>
+    <li><strong>喷雾、液滴、粉尘：</strong> 独立颗粒，不是连续幕布——计数胜于抹平。</li>
+    <li><strong>微小通道与微器件：</strong> 壁效应显著、碰撞稀少——运动靠“敲击”，不是平滑推动。</li>
+  </ul>
+  <p class="mt-2 text-xs text-slate-600">经验法则：分子越稀（或变化越陡），光滑图景越早失效。</p>
+</section>
+
+<!-- NEW: Ether & Photons -->
+<section id="ether-photons" class="card">
+  <h2 class="font-semibold">离散世界 ⇒ 场之和非零（光的“以太”）</h2>
+  <p class="mt-2 text-sm">
+    因为宇宙是<strong>离散</strong>的，所有电磁场的总和一般<strong>不为零</strong>，等效存在一个电磁“以太”（背景）。
+    在这种环境中，<strong>光子</strong>就像空气中的<strong>音爆</strong>一样——是由“颗粒”介质承载的真实传播扰动。
+  </p>
+  <p class="mt-2 text-sm">
+    在理想的<strong>连续</strong>模型里，整体场可被设定为处处为零，从而抹去“以太”。结果是悖论式的：
+    光子除非你恰好站在它正前方，否则“不可见”；而零体积意味着万物无法与之相互作用——光子沦为一种<em>人造产物</em>。
+    同理，在完全连续的空气模型里，音爆也会变成人造产物。
+  </p>
+  <p class="mt-2 text-sm">
+    “连续化”常被当作“无解时的解”，而人类偏好神秘，微积分/微分方程满足了这种需求。
+    工程师则计算<strong>近似</strong>并用实验检验。最明显的例子是<strong>空气动力学</strong>：
+    因为气体相对离散（原子间间隙较大），纯微分方程图景会吃力——所以需要<strong>风洞</strong>。
+  </p>
+</section>
+
+<section id="discrete-method" class="card">
+  <h2 class="font-semibold">如何用“离散的语言”（还能计算）</h2>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li><strong>先定窗口：</strong> 先选起点 <em>t₀</em> 与时长 <em>T</em> 再报数。</li>
+    <li><strong>计数事件：</strong> 碰撞、衰变、探测、穿越——按窗口/面积/时间计数。</li>
+    <li><strong>给出范围：</strong> 报区间不报承诺；预先说明允许误差。</li>
+    <li><strong>守住守恒：</strong> 质量、动量、能量——先看这些“围栏”。</li>
+    <li><strong>一步一步：</strong> 逐时刻更新（不藏无穷）；若必须抹平，说明位置与幅度。</li>
+  </ul>
+  <p class="mt-2 text-xs text-slate-600">连续数学依然有用——把它当计算器，而非“世界本质”的宣称。</p>
+</section>
+
+<!-- 项目 -->
+<section id="projects" class="space-y-6">
+
   <article class="card">
-    <h3 class="font-semibold">杨氏双缝：非对称</h3>
-    <p class="text-sm mt-1">不同金属箔配对、非对称图像，以及狭缝内发生了什么。</p>
+    <h2 class="font-semibold">非对称狭缝（DIY）</h2>
+    <p class="mt-2">自制铜-钢单狭缝，边缘非对称。怎么做、测什么、为何条纹讲述离散故事。含工具与安全备注。</p>
+    <p class="mt-2 text-sm">
+      阅读：<a class="text-sky-700 underline" href="https://zenodo.org/records/17059754" target="_blank" rel="noopener">支持爱因斯坦：DIY 非对称单狭缝衍射</a> ·
+      <a class="text-sky-700 underline" href="https://zenodo.org/records/17118247" target="_blank" rel="noopener">DIY 项目（MIT 回复）</a>
+    </p>
   </article>
+
   <article class="card">
-    <h3 class="font-semibold">薛定谔的猫 与 “生日”</h3>
-    <p class="text-sm mt-1">用机器逻辑重读“猫”，并把原子/光子的“诞生”视为时空中的一个点。</p>
+    <h2 class="font-semibold">杨氏实验三部曲</h2>
+    <p class="mt-2">前狭缝、狭缝内、后狭缝：光子与电子的离散步骤重述“干涉”。</p>
+    <p class="mt-2 text-sm">
+      阅读：<a class="text-sky-700 underline" href="https://zenodo.org/records/17118347" target="_blank" rel="noopener">杨氏双缝实验三部曲</a> ·
+      <a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">完成杨氏双缝实验：双曲非线性与条纹数</a>
+    </p>
   </article>
+
   <article class="card">
-    <h3 class="font-semibold">双曲干涉</h3>
-    <p class="text-sm mt-1">图样形状与参数变化的随笔与图示。</p>
+    <h2 class="font-semibold">超曲率与条纹数</h2>
+    <p class="mt-2">一个简单的模型调整如何重塑条纹预测，澄清“数量/间距”疑点。</p>
+    <p class="mt-2 text-sm">
+      阅读：<a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">双曲非线性与条纹数</a>
+    </p>
   </article>
+
+  <article class="card">
+    <h2 class="font-semibold">薛定谔之猫（三版本）</h2>
+    <p class="mt-2">三个思想实验版本：所谓“相同原子”究竟意味着什么；离散如何改变设置。</p>
+    <p class="mt-2 text-sm">
+      阅读：<a class="text-sky-700 underline" href="https://zenodo.org/records/17138575" target="_blank" rel="noopener">薛定谔之猫三版本</a>
+    </p>
+  </article>
+
+  <article class="card">
+    <h2 class="font-semibold">波与光子的“生日”</h2>
+    <p class="mt-2">形成时刻、多普勒、红移与“何时成为它自己”。连续外皮下的离散时间线。</p>
+    <p class="mt-2 text-sm">
+      阅读：<a class="text-sky-700 underline" href="https://zenodo.org/records/17139252" target="_blank" rel="noopener">波与光子的生日</a>
+    </p>
+  </article>
+
 </section>
 
-<section id="diy" class="max-w-4xl mx-auto px-4 py-10">
-  <div class="card">
-    <h2 class="text-xl font-semibold mb-3">DIY：搭建与测试</h2>
-    <ol class="list-decimal pl-6 space-y-2 text-sm">
-      <li>用工厂切边的铜/钢箔配对成狭缝。</li>
-      <li>用安全激光照射单缝；在卡纸上成像。</li>
-      <li>翻转狭缝；比较左右非对称，并拍照记录。</li>
-      <li>记录距离与激光类型等参数，分享图片与笔记。</li>
-    </ol>
-    <p class="text-xs text-slate-500 mt-3">注意安全：低功率激光 + 眼部防护。</p>
-  </div>
+<!-- 讲解 -->
+<section id="explainers" class="space-y-4">
+
+  <details id="exp-discrete-mimic" class="card">
+    <summary class="font-semibold">离散步骤如何“装出”波的条纹</summary>
+    <div class="mt-2 text-sm leading-6">允许步点 + 简单相位/时间规则 → 熟悉的明暗带。不必假设“涂抹成波”，只要叠加规则在对的地方相加/相消。</div>
+  </details>
+
+  <details id="exp-evidence-rule" class="card">
+    <summary class="font-semibold">证据标准（“脊梁图” + 证明）</summary>
+    <div class="mt-2 text-sm leading-6">两根轨：一张看懂全局的<strong>脊梁图</strong>；一份人人可逐行核对的<strong>证明</strong>。任一轨失效，列车不发车。</div>
+  </details>
+
+  <details id="exp-kepler" class="card" open>
+    <summary class="font-semibold">开普勒——共同数据，单人飞跃；为何不是“周末项目”</summary>
+    <div class="mt-2 text-sm leading-6">
+      <p><strong>第谷观测台</strong>是团队引擎——精密仪器、助手与<span class="whitespace-nowrap">几百~上千</span>个行星位置，耗时多年。</p>
+      <p>随后<strong>一个头脑</strong>（开普勒）多年搏斗（地心→日心），抛弃圆与等距点直到<strong>椭圆</strong>成立且<strong>等面积等时间</strong>保持恒定。其动机带有<strong>神圣重量</strong>：宇宙不应说谎。</p>
+      <p><strong>第二定律的组合性：</strong>“等面积等时间”把<strong>时间窗</strong>与<strong>起始相位</strong>耦合。<em>n</em>个时间点并非做 <em>n</em> 次检查，而是面临约 <strong>n²</strong> 个扇形对比（不同起点 × 等时段）。每个扇形都要 <code>r</code>、<code>Δθ</code> 与面积 <code>½·r²·Δθ</code>。</p>
+      <hr class="my-3">
+      <p class="font-medium">工作量一眼看</p>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-xs">
+          <thead><tr class="border-b">
+            <th class="text-left py-1 pr-3">目标</th>
+            <th class="text-left py-1 pr-3">合理数据</th>
+            <th class="text-left py-1 pr-3">每项手算成本</th>
+            <th class="text-left py-1 pr-3">一轮成本</th>
+            <th class="text-left py-1">总体数量级</th>
+          </tr></thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="py-1 pr-3"><strong>定律一：椭圆</strong></td>
+              <td class="py-1 pr-3">20–40 个关键点</td>
+              <td class="py-1 pr-3">化简 10–20 分/点；残差 2–4 分</td>
+              <td class="py-1 pr-3">~1–2 小时/模型一轮</td>
+              <td class="py-1">失败多轮累加 ~100–300 小时</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-1 pr-3"><strong>定律二：等面积等时间</strong></td>
+              <td class="py-1 pr-3">24–48 个扇区</td>
+              <td class="py-1 pr-3">每日 <code>r,θ</code> 10–20 分；面积 3–6 分</td>
+              <td class="py-1 pr-3">~10–20 小时/整轮</td>
+              <td class="py-1">多轮；呈 <strong>n²</strong> 比较</td>
+            </tr>
+            <tr>
+              <td class="py-1 pr-3"><strong>定律三：P² ∝ a³</strong></td>
+              <td class="py-1 pr-3">5–6 颗行星</td>
+              <td class="py-1 pr-3">2–5 分/行星（P,a 已知后）</td>
+              <td class="py-1 pr-3">~15–30 分</td>
+              <td class="py-1">为确定 P、a 的前期工作耗时“年级”</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3">他不是一开始就知道三条“正确定律”。每个错误模型都要通刷数据一遍；几十轮下来，仅被丢弃的工作量就<span class="whitespace-nowrap">几十~百小时</span>。</p>
+      <p class="mt-2"><em>小结：</em>共同观测成就了单人飞跃；动力高于舒适或职业：<strong>因天必不欺而我须不欺</strong>。</p>
+    </div>
+  </details>
 </section>
 
-<section id="papers" class="max-w-4xl mx-auto px-4 py-10">
-  <div class="card">
-    <h2 class="text-xl font-semibold mb-3">论文与预印本</h2>
-    <ul class="list-disc pl-6 text-sm space-y-2">
-      <li>非对称单缝（DIY + 笔记）— <a class="text-sky-700 underline" href="#">Zenodo</a></li>
-      <li>双曲干涉 — <a class="text-sky-700 underline" href="#">Zenodo / Preprint</a></li>
-      <li>薛定谔的猫 — <a class="text-sky-700 underline" href="#">Preprint</a></li>
-    </ul>
-  </div>
+<section id="mit-note" class="card">
+  <h2 class="font-semibold">MIT “单原子狭缝”：为何“加热 vs 冷却”得到“无差别”</h2>
+  <p class="mt-2 text-sm"><strong>相互作用极短。</strong> 光子掠过原子的时间约 10⁻¹⁶–10⁻¹⁵ 秒；若效应不能在此窗内发生，原子对光子等同“静止”。</p>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li><strong>布朗运动是“有质量”的运动。</strong> 光子静质量为零，热抖动很难在如此短暂相遇中对其产生“碰撞式”偏转。</li>
+    <li><strong>“无差别”其实可预期。</strong> 若只看温度/振幅，而不建模狭缝边缘<strong>电磁环境</strong>，自然看不出差别。</li>
+    <li><strong>单个原子不是“狭缝”。</strong> 真实狭缝主要是原子间隙；至少两原子才能界定光子可感知的边界。</li>
+    <li><strong>“垫脚石”逻辑。</strong> “看不见变化”并不排除边界电磁效应；一个清晰的<strong>非对称狭缝</strong>结果就足以说明“狭缝内部确有作用”。</li>
+  </ul>
+  <details class="mt-3">
+    <summary class="font-medium">超简批注（可用于邮件）</summary>
+    <p class="mt-2 text-sm">光子–原子相遇远短于热/布朗时间尺度，热振动基本无关。应关注晶格离散边界处的<strong>电磁环境</strong>：狭缝多为原子间隙，决定性的往往是边缘电磁而非热抖动。</p>
+  </details>
+  <p class="mt-3 text-xs text-slate-600">注：缺少严格的时间尺度分析时，对“狭缝内部电磁效应”为“无差别”的结论并不充分。</p>
 </section>
 
-<section id="contact" class="max-w-4xl mx-auto px-4 py-14">
-  <div class="card">
-    <h2 class="text-xl font-semibold mb-2">联系</h2>
-    <p class="text-sm"><a class="text-sky-700 underline" href="mailto:hello@continuous2discrete.org">hello@continuous2discrete.org</a></p>
-  </div>
+<section id="mit-related" class="card">
+  <h3 class="font-semibold">相关论文</h3>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li>
+      <a href="https://zenodo.org/record/XXXX" target="_blank" rel="noopener">非对称狭缝：DIY 实验与分析</a>
+      <span class="text-xs text-slate-600"> —— 狭缝内的离散边缘；为何“单原子 ≠ 狭缝”。</span>
+    </li>
+    <li>
+      <a href="https://zenodo.org/record/YYYY" target="_blank" rel="noopener">MIT“单原子狭缝”与布朗运动的注记</a>
+      <span class="text-xs text-slate-600"> —— 时间尺度、零结果与边缘电磁。</span>
+    </li>
+    <li>
+      <a href="https://zenodo.org/record/ZZZZ" target="_blank" rel="noopener">离散 vs 连续：光子、以太与空气动力学</a>
+      <span class="text-xs text-slate-600"> —— 场和非零；为何风洞仍然必需。</span>
+    </li>
+    <li>
+      <a href="https://zenodo.org/record/WWWW" target="_blank" rel="noopener">薛定谔之猫：逻辑审计</a>
+      <span class="text-xs text-slate-600"> —— 起点纪律、信息上锁、可重复性。</span>
+    </li>
+  </ul>
 </section>
 
-<footer class="border-t">
+<!-- 论文 -->
+<section id="papers" class="card">
+  <h2 class="font-semibold">论文与预印本</h2>
+
+  <h3 class="mt-3 font-medium">杨氏实验的离散重述</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118358" target="_blank" rel="noopener">非对称狭缝：杨氏实验的离散证据</a></li>
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118347" target="_blank" rel="noopener">杨氏双缝实验三部曲</a></li>
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">完成杨氏双缝实验：双曲非线性与条纹数</a></li>
+  </ul>
+
+  <h3 class="mt-3 font-medium">DIY 与“支持爱因斯坦”</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17059754" target="_blank" rel="noopener">支持爱因斯坦：DIY 铜-钢单狭缝衍射</a></li>
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118247" target="_blank" rel="noopener">DIY 项目：致 MIT 团队的回复</a></li>
+  </ul>
+
+  <h3 class="mt-3 font-medium">猫、生日与红移</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17138575" target="_blank" rel="noopener">薛定谔之猫三版本</a></li>
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17139252" target="_blank" rel="noopener">波与光子的生日：多普勒、红移、光速与维度力</a></li>
+  </ul>
+
+  <h3 class="mt-3 font-medium">定义“以太”</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17144468" target="_blank" rel="noopener">电磁以太：电荷的总体效应及其对引力与光的应用</a></li>
+  </ul>
+
+  <h3 class="mt-3 font-medium">定义“引力”</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17144630" target="_blank" rel="noopener">电磁引力：电子、正电子与磁性的总体效应</a></li>
+  </ul>
+
+  <h3 class="mt-3 font-medium">定义“数学”</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17153517" target="_blank" rel="noopener">数学：从无到有</a></li>
+  </ul>
+
+  <h3 class="mt-3 font-medium">历史的钟摆</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17230541" target="_blank" rel="noopener">人类智能与 AI：耳与眼的语言视角</a></li>
+  </ul>
+
+  <p class="mt-4 text-sm"><a class="text-sky-700 underline" href="#">回到顶部</a></p>
+</section>
+
+</main>
+
+<footer class="border-t mt-10">
   <div class="max-w-4xl mx-auto px-4 py-8 text-sm flex items-center justify-between">
     <span>© <span id="year"></span> Dong Zhang · CC BY 4.0</span>
     <a href="#" class="hover:underline">回到顶部</a>
   </div>
   <div class="max-w-4xl mx-auto px-4 pb-8 text-xs text-slate-600">
-    语言与教学在 <a class="underline" href="https://ear2eye.org/">ear2eye.org</a>
+    语言相关在 <a class="underline" href="https://ear2eye.org/">ear2eye.org</a>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c15688fba7be4bf7992ebe1b29be4efc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
