@@ -20,25 +20,30 @@
   html{scroll-behavior:smooth}
 </style>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+<body class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100 text-slate-800">
 
 <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b">
   <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="/" class="font-semibold">continuous → discrete</a>
+    <p class="text-xl font-bold bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent">continuous → discrete</p>
     <nav class="hidden md:flex gap-6">
       <a href="#hero" class="hover:underline">Home</a>
       <a href="#projects" class="hover:underline">Projects</a>
       <a href="#explainers" class="hover:underline">Explainers</a>
       <a href="#papers" class="hover:underline">Papers</a>
       <a href="#exp-kepler" class="hover:underline">Kepler</a>
+      <a href="#ether-photons" class="hover:underline">Ether & Photons</a>
+      <a href="#mit-note" class="hover:underline">MIT</a>
       <a href="https://ear2eye.org/" class="hover:underline">Ear2Eye</a>
       <a href="/pages/about.html" class="hover:underline">About</a>
-        <a href="/zh/" class="hover:underline">中文</a></nav>
+      <a href="/zh/" class="hover:underline">中文</a>
+    </nav>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 pb-8 text-l font-bold text-slate-600">
+    Language notes at <a class="underline" href="https://ear2eye.org/">ear2eye.org</a>
   </div>
 </header>
 
 <main class="max-w-4xl mx-auto px-4 py-10 space-y-10">
-
 
 <section id="atoms-not-identical" class="card">
   <h1 class="font-semibold text-xl">Atoms are different (not identical), and a complete reading of Schrödinger’s Cat</h1>
@@ -46,115 +51,78 @@
   <ol class="mt-3 list-decimal pl-6 text-sm leading-6 space-y-2">
     <li>
       <strong>The original thought experiment: Schrödinger’s cat.</strong>
-      <div class="mt-1 text-slate-800">A sealed box couples a radioactive source to a lethal mechanism and a cat. (text)</div>
+      <div class="mt-1 text-slate-800">Schrödinger, in 1935, wrote:</div>
+      <div class="mt-1 text-slate-800">"One can contrive even completely burlesque [farcical] cases. A cat is put in a steel chamber along with the following infernal device (which must be secured against direct interference by the cat): in a Geiger counter, there is a tiny amount of radioactive substance, so tiny that in the course of an hour one of the atoms will perhaps decay, but also, with equal probability, that none of them will; if it does happen, the counter tube will discharge and through a relay release a hammer that will shatter a small flask of hydrocyanic acid. If one has left this entire system to itself for an hour, one would tell oneself that the cat is still alive if no atom has decayed in the meantime. Even a single atomic decay would have poisoned it. The psi-function of the entire system would express this by having in it the living and dead cat (pardon the expression) mixed or spread out in equal parts.</div>
+      <div class="mt-1 text-slate-800">It is typical of these cases that an indeterminacy originally restricted to the atomic domain turns into a sensually observable [macroscopic] indeterminacy, which can then be resolved by direct observation. This prevents us from so naïvely accepting a "blurred model" as representative of reality. Per se, it would not embody anything unclear or contradictory. There is a difference between a shaky or out-of-focus photograph and a snapshot of clouds and fog banks."</div>
+      <div class="mt-1"><em>Observation 0 — A sealed box couples a radioactive source to a lethal mechanism and a cat. First decay detection in the experiment, or the experiment of detecting the first atom to decay. The "first atom" suggests that the atoms are not the same. Therefore, only one Geiger counter is needed, and it's counted or not counted, replacing whether the cat is alive or dead.</em></div>
     </li>
 
     <li>
       <strong>Einstein’s version of the original Schrödinger’s cat.</strong>
-      <div class="mt-1 text-slate-800">(test)</div>
-      <div class="mt-1"><em>First observation — Forfeited information.</em> The box is non‑transparent and soundproof. “Alive &amp; dead” appears only if we choose <em>not</em> to observe until the end. That’s an <strong>information rule</strong>, not a seen fact. Schrödinger’s cat is a <strong>Blind and Deaf physicist’s</strong> cat.</div>
-      <div class="mt-1"><em>Second observation — Visual and auditory cues matter.</em> In Einstein’s explosion variant, light and sound highlight the process <em>before</em> we get to the cat. The cat becomes unnecessary: even before “alive or dead” is a question, we can ask whether the <strong>Geiger counter</strong> is counting, the hammer is falling, the flask is breaking, or the dynamite explodes. One counter is sufficient.</div>
+      <div class="mt-1 text-slate-800">Einstein, in 1950, wrote:</div>
+      <div class="mt-1 text-slate-800">"You are the only contemporary physicist, besides Laue, who sees that one cannot get around the assumption of reality, if only one is honest. Most of them simply do not see what sort of risky game they are playing with reality—reality as something independent of what is experimentally established. Their interpretation is, however, refuted most elegantly by your system of radioactive atom + amplifier + charge of gun powder + cat in a box, in which the psi-function of the system contains both the cat alive and blown to bits. Nobody really doubts that the presence or absence of the cat is something independent of the act of observation."</div>
+      <div class="mt-1"><em>Observation 1 — Forfeited information.</em> The box is non-transparent and soundproof. “Alive &amp; dead” appears only if we choose <em>not</em> to observe until the end. That’s an <strong>information rule</strong>, not a seen fact. Schrödinger’s cat is a <strong>Blind and Deaf physicist’s</strong> cat.</div>
+      <div class="mt-1"><em>Observation 2 — Visual and auditory cues matter.</em> In Einstein’s explosion variant, light and sound highlight the process <em>before</em> we get to the cat. The cat becomes unnecessary: even before “alive or dead” is a question, we can ask whether the <strong>Geiger counter</strong> is counting, the hammer is falling, the flask is breaking, or the dynamite explodes. One counter is sufficient.</div>
     </li>
 
     <li>
       <strong>Blind and Deaf physicist’s Geiger counter.</strong>
       <div class="mt-1 text-slate-800">(test)</div>
-      <div class="mt-1"><em>Third observation — Feasible, therefore not a pure thought experiment.</em> Without exotic assumptions (like a train at light speed), the “blind &amp; deaf” Geiger setup is <strong>doable</strong>. No animal need be involved or harmed.</div>
+      <div class="mt-1"><em>Observation 3 — Feasible, therefore not a pure thought experiment.</em> Without exotic assumptions (like a train at light speed), the “blind &amp; deaf” Geiger setup is <strong>doable</strong>. No animal need be involved or harmed.</div>
     </li>
 
     <li>
-      <strong>The “50%” only makes sense after start time and window are fixed.</strong>
-      <div class="mt-1"><em>Fourth observation — Probability can be ill‑posed.</em> The classic line—“so tiny that in an hour one atom perhaps decays, and with equal probability, none”—is ill‑defined unless we fix a clear <strong>start</strong> (t₀) and <strong>window</strong> (T). Otherwise even “50%” has no footing.</div>
+      <strong>The “50%” only makes sense after the start time and window are fixed.</strong>
+      <div class="mt-1"><em>Observation 4 — Since the experiment is detecting the first decay, the probability of 1/2 is of the occurrence of the first decay in a one-hour time window. </em> The original classic line—“so tiny that in an hour one atom perhaps decays, and with equal probability, none”—is ill-defined unless we fix a clear <strong>start</strong> (t₀) and <strong>window</strong> (T). Otherwise, even “50%” has no footing, especially when the atoms are indistinguishable, identical, or even completely identical.</div>
     </li>
 
     <li>
       <strong>Schrödinger’s cat is about the first radioactive decay (or its detection).</strong>
-      <div class="mt-1"><em>Fifth observation — The ‘tiny amount’ premise is logically sloppy.</em> Preparing many atoms and then reasoning “more atoms ⇒ higher chance within an hour” changes the object of study. The chain really keys off the <strong>first decay</strong> event.</div>
+      <div class="mt-1"><em>Observation 5 — The ‘tiny amount’ premise is logically sloppy.</em> Preparing many atoms and then reasoning “more atoms ⇒ higher chance within an hour” changes the object of study. The chain really keys off the <strong>first decay</strong> event.</div>
     </li>
 
     <li>
       <strong>The third version: use only <em>one</em> radioactive atom.</strong>
-      <div class="mt-1"><em>Sixth observation — Now it is a thought experiment, but the thought misfires.</em> With a single atom the time may be long—fine for thought experiments. But we do not know how long the trial lasts if we do not know when the atom was created or when the trial starts. Without t₀, the trial could last “forever.”</div>
+      <div class="mt-1"><em>Observation 6 — Now it is a thought experiment, but the thought misfires.</em> With a single atom the time may be long—fine for thought experiments. But we do not know how long the trial lasts if we do not know when the atom was created or when the trial starts. Without t₀, the trial could last “forever.”</div>
     </li>
 
     <li>
       <strong>The correct version: the Actuary’s cat.</strong>
-      <div class="mt-1"><em>Seventh observation — Start, window, and many trials.</em> Insurance policies are controlled experiments: policyholder birthdays are known; each policy has a clear start date; one claim means little, but <strong>many policies</strong> (many trials) yield stable statistics. That, not a single sealed box, is how to reason about rare events.</div>
+      <div class="mt-1"><em>Observation 7 — Start, window, and many trials.</em> Insurance policies are controlled experiments: policyholder birthdays are known; each policy has a clear start date; one claim means little, but <strong>many policies</strong> (many trials) yield stable statistics. That, not a single sealed box, is how to reason about rare events.</div>
     </li>
 
     <li>
       <strong>“You can’t step in the same river twice.”</strong>
-      <div class="mt-1"><em>Eighth observation — What repeatable should mean.</em> Exact repeat (same nucleus + same micro‑history) is impossible. Repeat the <strong>procedure</strong> for comparable statistics; do not pretend identical micro‑states.</div>
+      <div class="mt-1"><em>Observation 8 — What repeatable should mean.</em> Exact repeat (same nucleus + same micro-history) is impossible. Repeat the <strong>procedure</strong> for comparable statistics; do not pretend identical micro-states.</div>
     </li>
 
     <li>
       <strong>Atoms of the same isotope are <em>not</em> identical.</strong>
-      <div class="mt-1"><em>Ninth observation — Non‑identity is the central theme.</em> Even with the same counts of protons and neutrons, atoms differ (at least logically, and often physically). Treating many atoms as one smooth object <em>smears</em> these differences and wipes out their individual electromagnetic fields. Since the number of atoms is finite, “identical” is a modeling convenience, not a fact.</div>
+      <div class="mt-1"><em>Observation 9 — Non-identity is the central theme.</em> Even with the same counts of protons and neutrons, atoms differ (at least logically, and often physically). Treating many atoms as one smooth object <em>smears</em> these differences and wipes out their individual electromagnetic fields. Since the number of atoms is finite, “identical” is a modeling convenience, not a fact.</div>
     </li>
   </ol>
 </section>
 
-
-
-
-  <!-- HERO -->
-  <section id="hero" class="card">
-    <h1 class="font-semibold text-xl">Continuous → Discrete</h1>
-    <p class="mt-2">
-      Simple builds, clear claims. From Young’s double slit to asymmetric slits, from waves to the
-      “birthdays” of photons and atoms. DIY where possible; proofs where needed.
-    </p>
-    <p class="mt-2 text-sm">
-      Jump to:
-      <a class="text-sky-700 underline" href="#projects">Projects</a> ·
-      <a class="text-sky-700 underline" href="#papers">Papers</a> ·
-      <a class="text-sky-700 underline" href="#exp-kepler">Why Kepler’s laws aren’t a weekend project</a>
-    </p>
-  </section>
+<!-- HERO -->
+<section id="hero" class="card">
+  <h1 class="font-semibold text-xl">Continuous → Discrete</h1>
+  <p class="mt-2">
+    Simple builds, clear claims. From Young’s double slit to asymmetric slits, from waves to the
+    “birthdays” of photons and atoms. DIY where possible; proofs where needed.
+  </p>
+  <p class="mt-2 text-sm">
+    Jump to:
+    <a class="text-sky-700 underline" href="#projects">Projects</a> ·
+    <a class="text-sky-700 underline" href="#papers">Papers</a> ·
+    <a class="text-sky-700 underline" href="#exp-kepler">Why Kepler’s laws aren’t a weekend project</a>
+  </p>
+</section>
 
 <!-- BEGIN banner -->
-<section class="card" role="note" aria-label="cat-paradox-banner">
+<section class="card bg-gradient-to-r from-amber-50 to-rose-50" role="note" aria-label="cat-paradox-banner">
   <p class="text-center font-medium">The paradox lives in the <em>lock</em>, not in the cat.</p>
 </section>
 <!-- END banner -->
-
-<section id="cat-logic" class="card">
-  <h2 class="font-semibold">Schrödinger’s Cat: the three logical snags</h2>
-
-  <ol class="mt-2 list-decimal pl-6 text-sm leading-6">
-    <li><strong>Forfeited information.</strong> The box blocks sight, sound, and cues. “Alive &amp; dead” appears only if we
-      choose to <em>not</em> observe until the end. That’s an <em>information rule</em>, not a seen fact.</li>
-
-<li><strong>Start time is fuzzy → probability ill-defined.</strong>
-  Radioactive decay uses <em>p = 1 − e^{-λT}</em>, but only after you fix a clear start and window.
-  If the source has been running before the lid closes, you must condition on “no decay yet.”
-  Without a well-defined <em>start</em> and <em>duration</em>, even “50%” has no logical footing.
-</li>
-<p class="mt-2 text-xs text-slate-600">
-  Note: in an ideal exponential process the hazard is memoryless, but the <em>reported</em> probability still depends on the
-  chosen window and detector settings (thresholds, dead-time). No window ⇒ no probability.
-</p>
-
-    <li><strong>“Repeatable” means what?</strong> You can’t reset the same nucleus with the same micro-history.
-      In ideal theory, radioactive decay is <em>memoryless</em> (each trial has the same statistics),
-      but a single cat-in-a-box run is not the <em>same state</em> twice.
-      You’re not stepping into the exact same river—only the same kind of river.</li>
-  </ol>
-
-  <details class="mt-3">
-    <summary class="font-medium">Why this matters for “superposition”</summary>
-    <p class="mt-2 text-sm">
-      The famous line—“cat both alive and dead”—comes from (1) sealing information, plus (2) a fuzzy start, plus (3) treating
-      one-off trials as clones. It’s cleaner to say the setup tests our <em>rules for observation</em> and the
-      <em>measurement cut</em>, not that nature makes macroscopic live-and-dead animals.
-    </p>
-  </details>
-
-  <p class="mt-3 text-sm">
-    Spine idea: draw the object chain (source→counter→trigger→vial→cat), show two branches (decay / no-decay),
-    and put a lock icon over the box until “open.” The paradox lives in the lock.
-  </p>
-</section>
 
 <section id="cat-logic" class="card">
   <h2 class="font-semibold">Schrödinger’s Cat: the three logical snags</h2>
@@ -236,8 +204,7 @@
   </ul>
 </section>
 
-
-<section class="card" role="note" aria-label="cont-vs-discrete-banner">
+<section class="card bg-gradient-to-r from-sky-50 to-indigo-50" role="note" aria-label="cont-vs-discrete-banner">
   <p class="text-center font-medium">
     Continuous math draws the map; the world is pieces. Use it to compute, not to pretend the atoms aren’t there.
   </p>
@@ -274,6 +241,27 @@
   </p>
 </section>
 
+<!-- NEW: Ether & Photons -->
+<section id="ether-photons" class="card">
+  <h2 class="font-semibold">Discrete world ⇒ non-zero field sums (an “ether” for light)</h2>
+  <p class="mt-2 text-sm">
+    Because the universe is <strong>discrete</strong>, the sum of all electromagnetic fields is generally <strong>non-zero</strong>,
+    so an electromagnetic <em>background</em> (an “ether”) effectively exists. In that environment, <strong>photons</strong> exist
+    much like <strong>sonic booms</strong> exist in air: real, propagating disturbances in a medium made of pieces.
+  </p>
+  <p class="mt-2 text-sm">
+    In an ideal <em>continuous</em> model, the total field can be forced to zero everywhere, erasing the ether.
+    The result is paradoxical: photons become “invisible” unless you are exactly in front of them; and with zero volume,
+    nothing interacts—turning the photon into an <em>artifact</em>. Likewise, in a perfectly continuous air model,
+    even a sonic boom becomes an artifact.
+  </p>
+  <p class="mt-2 text-sm">
+    “Continuation” is the solution when there is no solution—humans like mystery, and calculus/differential equations can supply it.
+    Engineers, however, compute <em>approximations</em> and then test. The most obvious example is <strong>aerodynamics</strong>:
+    because gases are relatively discrete (large gaps between atoms), pure differential-equation pictures struggle; you need a <strong>wind tunnel</strong>.
+  </p>
+</section>
+
 <section id="discrete-method" class="card">
   <h2 class="font-semibold">How to speak discretely (and still compute)</h2>
   <ul class="mt-2 list-disc pl-6 text-sm leading-6">
@@ -288,179 +276,244 @@
   </p>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="space-y-6">
 
-  <!-- PROJECTS -->
-  <section id="projects" class="space-y-6">
+  <article class="card">
+    <h2 class="font-semibold">Asymmetric Slit (DIY)</h2>
+    <p class="mt-2">
+      A home-build copper–steel single slit with asymmetric edges. What to build, what to measure,
+      and why the fringe tells a discrete story. Includes tooling tips and safety notes.
+    </p>
+    <p class="mt-2 text-sm">
+      Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17059754" target="_blank" rel="noopener">Supporting Einstein: Asymmetric Single-Slit Diffraction</a> ·
+      <a class="text-sky-700 underline" href="https://zenodo.org/records/17118247" target="_blank" rel="noopener">DIY Project Supporting Einstein (MIT reply)</a>
+    </p>
+  </article>
 
-    <article class="card">
-      <h2 class="font-semibold">Asymmetric Slit (DIY)</h2>
-      <p class="mt-2">
-        A home-build copper–steel single slit with asymmetric edges. What to build, what to measure,
-        and why the fringe tells a discrete story. Includes tooling tips and safety notes.
-      </p>
-      <p class="mt-2 text-sm">
-        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17059754" target="_blank" rel="noopener">Supporting Einstein: Asymmetric Single-Slit Diffraction</a> ·
-        <a class="text-sky-700 underline" href="https://zenodo.org/records/17118247" target="_blank" rel="noopener">DIY Project Supporting Einstein (MIT reply)</a>
-      </p>
-    </article>
+  <article class="card">
+    <h2 class="font-semibold">Trilogy of Young’s Experiment</h2>
+    <p class="mt-2">
+      Pre-slit, in-slit, post-slit dynamics of photons and electrons — a trilogy that reframes
+      interference with discrete steps.
+    </p>
+    <p class="mt-2 text-sm">
+      Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17118347" target="_blank" rel="noopener">Trilogy of Young’s Double-Slit Experiment</a> ·
+      <a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">On Completing Young’s Double-Slit Experiment</a>
+    </p>
+  </article>
 
-    <article class="card">
-      <h2 class="font-semibold">Trilogy of Young’s Experiment</h2>
-      <p class="mt-2">
-        Pre-slit, in-slit, post-slit dynamics of photons and electrons — a trilogy that reframes
-        interference with discrete steps.
-      </p>
-      <p class="mt-2 text-sm">
-        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17118347" target="_blank" rel="noopener">Trilogy of Young’s Double-Slit Experiment</a> ·
-        <a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">On Completing Young’s Double-Slit Experiment</a>
-      </p>
-    </article>
+  <article class="card">
+    <h2 class="font-semibold">Hyperbolic Interference & Fringe Count</h2>
+    <p class="mt-2">
+      How a hyperbolic nonlinearity reshapes fringe prediction. Why a simple tweak in the model
+      clarifies stubborn anomalies in count and spacing.
+    </p>
+    <p class="mt-2 text-sm">
+      Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">Hyperbolic Nonlinearity & Fringe Count</a>
+    </p>
+  </article>
 
-    <article class="card">
-      <h2 class="font-semibold">Hyperbolic Interference & Fringe Count</h2>
-      <p class="mt-2">
-        How a hyperbolic nonlinearity reshapes fringe prediction. Why a simple tweak in the model
-        clarifies stubborn anomalies in count and spacing.
-      </p>
-      <p class="mt-2 text-sm">
-        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">Hyperbolic Nonlinearity & Fringe Count</a>
-      </p>
-    </article>
+  <article class="card">
+    <h2 class="font-semibold">Schrödinger’s Cat (3 versions)</h2>
+    <p class="mt-2">
+      A trio of thought-experiments: what “identical atoms” really means, and how discreteness
+      changes the cat’s setup.
+    </p>
+    <p class="mt-2 text-sm">
+      Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17138575" target="_blank" rel="noopener">Three Versions of Schrödinger’s Cat</a>
+    </p>
+  </article>
 
-    <article class="card">
-      <h2 class="font-semibold">Schrödinger’s Cat (3 versions)</h2>
-      <p class="mt-2">
-        A trio of thought-experiments: what “identical atoms” really means, and how discreteness
-        changes the cat’s setup.
-      </p>
-      <p class="mt-2 text-sm">
-        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17138575" target="_blank" rel="noopener">Three Versions of Schrödinger’s Cat</a>
-      </p>
-    </article>
+  <article class="card">
+    <h2 class="font-semibold">Birthday of Waves & Photons</h2>
+    <p class="mt-2">
+      Formation moments, Doppler, redshift, and “when” a photon becomes itself. A discrete timeline
+      under a continuous skin.
+    </p>
+    <p class="mt-2 text-sm">
+      Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17139252" target="_blank" rel="noopener">The Birthday of Waves and Photons</a>
+    </p>
+  </article>
 
-    <article class="card">
-      <h2 class="font-semibold">Birthday of Waves & Photons</h2>
-      <p class="mt-2">
-        Formation moments, Doppler, redshift, and “when” a photon becomes itself. A discrete timeline
-        under a continuous skin.
-      </p>
-      <p class="mt-2 text-sm">
-        Read: <a class="text-sky-700 underline" href="https://zenodo.org/records/17139252" target="_blank" rel="noopener">The Birthday of Waves and Photons</a>
-      </p>
-    </article>
+</section><!-- /projects -->
 
-  </section><!-- /projects -->
+<!-- EXPLAINERS -->
+<section id="explainers" class="space-y-4">
 
-  <!-- EXPLAINERS -->
-  <section id="explainers" class="space-y-4">
+  <details id="exp-discrete-mimic" class="card">
+    <summary class="font-semibold">How discrete steps mimic wave fringes</summary>
+    <div class="mt-2 text-sm leading-6">
+      A grid of allowed steps plus a simple rule on phase/time can produce familiar bright–dark bands.
+      You don’t need a literal “smeared wave” if your step rule accumulates and cancels in the right places.
+    </div>
+  </details>
 
-    <details id="exp-discrete-mimic" class="card">
-      <summary class="font-semibold">How discrete steps mimic wave fringes</summary>
-      <div class="mt-2 text-sm leading-6">
-        A grid of allowed steps plus a simple rule on phase/time can produce familiar bright–dark bands.
-        You don’t need a literal “smeared wave” if your step rule accumulates and cancels in the right places.
+  <details id="exp-evidence-rule" class="card">
+    <summary class="font-semibold">What counts as evidence (proof + spine-figure)</summary>
+    <div class="mt-2 text-sm leading-6">
+      Two rails: (1) a spine-figure that shows the whole claim in one clean picture; (2) a proof that any
+      trained reader can check line by line. If either rail fails, the train doesn’t run.
+    </div>
+  </details>
+
+  <!-- Kepler block reused here -->
+  <details id="exp-kepler" class="card" open>
+    <summary class="font-semibold">Kepler — communal data, singular leap; why this isn’t a weekend project</summary>
+    <div class="mt-2 text-sm leading-6">
+      <p><strong>Tycho’s observatory</strong> was a team engine—precision instruments, assistants, and
+      <em>hundreds–thousands</em> planetary positions gathered over years. That communal load made the data.</p>
+
+      <p>Then <strong>one mind</strong>, Johannes Kepler, wrestled those observations for years (geocentric → heliocentric),
+      discarding circles, equants, and ovals until <em>ellipses</em> held and <em>equal areas in equal times</em> stayed constant.
+      This wasn’t a casual, secular side-project; it carried a <strong>sacred charge</strong>—to show a cosmos that does not lie.</p>
+
+      <p><strong>Law 2’s combinatorial bite:</strong> “Equal areas in equal times” couples the <em>time window</em> and the
+      <em>starting phase</em>. With <em>n</em> time marks you don’t do <em>n</em> checks—you face ~<strong>n²</strong> sector
+      comparisons (different starts × equal intervals). Each sector needs <code>r</code>, <code>Δθ</code>, and area
+      <code>½·r²·Δθ</code>. Even if one area takes minutes once <code>r,θ</code> are reduced, the grid of comparisons explodes.</p>
+
+      <hr class="my-3">
+
+      <p><strong>Complexity at a glance</strong></p>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-xs">
+          <thead>
+            <tr class="border-b">
+              <th class="text-left py-1 pr-3">Target</th>
+              <th class="text-left py-1 pr-3">Reasonable data</th>
+              <th class="text-left py-1 pr-3">Per-item cost (by hand)</th>
+              <th class="text-left py-1 pr-3">Pass cost</th>
+              <th class="text-left py-1">Total effort (order)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="py-1 pr-3"><strong>Law 1: ellipse</strong></td>
+              <td class="py-1 pr-3">20–40 key points</td>
+              <td class="py-1 pr-3">10–20 min reduce/pt; 2–4 min residual</td>
+              <td class="py-1 pr-3">~1–2 h per model pass</td>
+              <td class="py-1">~100–300 h across many failed passes</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-1 pr-3"><strong>Law 2: equal areas</strong></td>
+              <td class="py-1 pr-3">24–48 sectors</td>
+              <td class="py-1 pr-3">10–20 min per date for <code>r,θ</code>; 3–6 min per area</td>
+              <td class="py-1 pr-3">~10–20 h per full round</td>
+              <td class="py-1">Multiple rounds; <strong>n²</strong> comparisons</td>
+            </tr>
+            <tr>
+              <td class="py-1 pr-3"><strong>Law 3: P² ∝ a³</strong></td>
+              <td class="py-1 pr-3">5–6 planets</td>
+              <td class="py-1 pr-3">2–5 min per planet (once P,a known)</td>
+              <td class="py-1 pr-3">~15–30 min</td>
+              <td class="py-1">Years upstream to fix P and a</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </details>
 
-    <details id="exp-evidence-rule" class="card">
-      <summary class="font-semibold">What counts as evidence (proof + spine-figure)</summary>
-      <div class="mt-2 text-sm leading-6">
-        Two rails: (1) a spine-figure that shows the whole claim in one clean picture; (2) a proof that any
-        trained reader can check line by line. If either rail fails, the train doesn’t run.
-      </div>
-    </details>
+      <p class="mt-3"><strong>He didn’t start with the right laws.</strong> Each wrong model required a full pass across the dataset.
+      At ~1–2 h per pass and dozens of passes, the discarded work alone is <em>tens to 100+ hours</em>.</p>
 
-    <!-- Kepler block reused here -->
-    <details id="exp-kepler" class="card" open>
-      <summary class="font-semibold">Kepler — communal data, singular leap; why this isn’t a weekend project</summary>
-      <div class="mt-2 text-sm leading-6">
-        <p><strong>Tycho’s observatory</strong> was a team engine—precision instruments, assistants, and
-        <em>hundreds–thousands</em> planetary positions gathered over years. That communal load made the data.</p>
+      <p class="mt-2"><em>Summary:</em> communal observation enabled a singular leap; the motive force ranked above comfort or career—
+      <em>to be right because heaven must be right</em>.</p>
+    </div>
+  </details>
 
-        <p>Then <strong>one mind</strong>, Johannes Kepler, wrestled those observations for years (geocentric → heliocentric),
-        discarding circles, equants, and ovals until <em>ellipses</em> held and <em>equal areas in equal times</em> stayed constant.
-        This wasn’t a casual, secular side-project; it carried a <strong>sacred charge</strong>—to show a cosmos that does not lie.</p>
+</section><!-- /explainers -->
 
-        <p><strong>Law 2’s combinatorial bite:</strong> “Equal areas in equal times” couples the <em>time window</em> and the
-        <em>starting phase</em>. With <em>n</em> time marks you don’t do <em>n</em> checks—you face ~<strong>n²</strong> sector
-        comparisons (different starts × equal intervals). Each sector needs <code>r</code>, <code>Δθ</code>, and area
-        <code>½·r²·Δθ</code>. Even if one area takes minutes once <code>r,θ</code> are reduced, the grid of comparisons explodes.</p>
+<section id="mit-note" class="card">
+  <h2 class="font-semibold">MIT “Single-Atom Slit”: why “warm vs cold” found nothing</h2>
+  <p class="mt-2 text-sm">
+    <strong>Interaction is ultra-brief.</strong> A photon passes an atom in ~10⁻¹⁶–10⁻¹⁵ s. Any temperature or Brownian effect must act within that window; otherwise the atom is effectively still to the photon.
+  </p>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li><strong>Brownian motion is motion of mass.</strong> Photons have zero rest mass, so atomic thermal jiggle doesn’t “kick” them in any meaningful way—especially over such short encounters.</li>
+    <li><strong>Null result was expected.</strong> “Warm atom-slit → no difference” is unsurprising unless you model electromagnetic environment at the slit edges, not just atomic vibration.</li>
+    <li><strong>One atom isn’t a slit.</strong> In a real slit, most space is the gap between atoms; at least two atoms define a boundary the photon “feels.” A lone atom is mostly just empty space around it.</li>
+    <li><strong>Stepstone logic.</strong> Their “nothing happened” does not rule out edge EM effects; one clear asymmetric-slit result is enough to show “something can happen inside the slit.”</li>
+  </ul>
 
-        <hr class="my-3">
+  <details class="mt-3">
+    <summary class="font-medium">Ultra-concise critique (you can reuse in emails)</summary>
+    <p class="mt-2 text-sm">
+      In single-atom slit work, the photon–atom encounter is far shorter than thermal/Brownian timescales, so vibration is irrelevant on impact. The right question is the <em>electromagnetic environment</em> at edges in a discrete lattice: most of a slit is interatomic gaps, and boundary EM—not thermal jitter—can shape outcomes.
+    </p>
+  </details>
 
-        <p><strong>Complexity at a glance</strong></p>
-        <div class="overflow-x-auto">
-          <table class="min-w-full text-xs">
-            <thead>
-              <tr class="border-b">
-                <th class="text-left py-1 pr-3">Target</th>
-                <th class="text-left py-1 pr-3">Reasonable data</th>
-                <th class="text-left py-1 pr-3">Per-item cost (by hand)</th>
-                <th class="text-left py-1 pr-3">Pass cost</th>
-                <th class="text-left py-1">Total effort (order)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b">
-                <td class="py-1 pr-3"><strong>Law 1: ellipse</strong></td>
-                <td class="py-1 pr-3">20–40 key points</td>
-                <td class="py-1 pr-3">10–20 min reduce/pt; 2–4 min residual</td>
-                <td class="py-1 pr-3">~1–2 h per model pass</td>
-                <td class="py-1">~100–300 h across many failed passes</td>
-              </tr>
-              <tr class="border-b">
-                <td class="py-1 pr-3"><strong>Law 2: equal areas</strong></td>
-                <td class="py-1 pr-3">24–48 sectors</td>
-                <td class="py-1 pr-3">10–20 min per date for <code>r,θ</code>; 3–6 min per area</td>
-                <td class="py-1 pr-3">~10–20 h per full round</td>
-                <td class="py-1">Multiple rounds; <strong>n²</strong> comparisons</td>
-              </tr>
-              <tr>
-                <td class="py-1 pr-3"><strong>Law 3: P² ∝ a³</strong></td>
-                <td class="py-1 pr-3">5–6 planets</td>
-                <td class="py-1 pr-3">2–5 min per planet (once P,a known)</td>
-                <td class="py-1 pr-3">~15–30 min</td>
-                <td class="py-1">Years upstream to fix P and a</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <p class="mt-3 text-xs text-slate-600">
+    Further note: without a quantitative timescale analysis, a “no difference” claim is logically inconclusive for EM effects inside slits.
+  </p>
+</section>
 
-        <p class="mt-3"><strong>He didn’t start with the right laws.</strong> Each wrong model required a full pass across the dataset.
-        At ~1–2 h per pass and dozens of passes, the discarded work alone is <em>tens to 100+ hours</em>.</p>
+<section id="mit-related" class="card">
+  <h3 class="font-semibold">Related papers</h3>
+  <ul class="mt-2 list-disc pl-6 text-sm leading-6">
+    <li>
+      <a href="https://zenodo.org/record/XXXX" target="_blank" rel="noopener">Asymmetric Slit: DIY experiment & analysis</a>
+      <span class="text-xs text-slate-600"> — discrete edges inside a slit; why “one atom ≠ a slit”.</span>
+    </li>
+    <li>
+      <a href="https://zenodo.org/record/YYYY" target="_blank" rel="noopener">Note on MIT “single-atom slit” and Brownian claims</a>
+      <span class="text-xs text-slate-600"> — timescales, null results, and edge EM.</span>
+    </li>
+    <li>
+      <a href="https://zenodo.org/record/ZZZZ" target="_blank" rel="noopener">Discrete vs Continuous: photons, ether, and aerodynamics</a>
+      <span class="text-xs text-slate-600"> — non-zero field sums; why wind tunnels still rule.</span>
+    </li>
+    <li>
+      <a href="https://zenodo.org/record/WWWW" target="_blank" rel="noopener">Schrödinger’s Cat: a logic audit</a>
+      <span class="text-xs text-slate-600"> — start-time discipline, information locks, repeatability.</span>
+    </li>
+  </ul>
+</section>
 
-        <p class="mt-2"><em>Summary:</em> communal observation enabled a singular leap; the motive force ranked above comfort or career—
-        <em>to be right because heaven must be right</em>.</p>
-      </div>
-    </details>
+<!-- PAPERS -->
+<section id="papers" class="card">
+  <h2 class="font-semibold">Papers & Preprints</h2>
 
-  </section><!-- /explainers -->
+  <h3 class="mt-3 font-medium">Discrete Reinterpretation of Young’s Experiment</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118358" target="_blank" rel="noopener">Asymmetric Slit: Experimental Evidence for a Discrete Reinterpretation of Young’s Experiment</a></li>
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118347" target="_blank" rel="noopener">Trilogy of Young’s Double-Slit Experiment: Pre-Slit, In-Slit, and Post-Slit Dynamics</a></li>
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">On Completing Young’s Double-Slit Experiment: Hyperbolic Nonlinearity and Fringe Count</a></li>
+  </ul>
 
-  <!-- PAPERS -->
-  <section id="papers" class="card">
-    <h2 class="font-semibold">Papers & Preprints</h2>
+  <h3 class="mt-3 font-medium">DIY & Evidence for Einstein</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17059754" target="_blank" rel="noopener">Supporting Einstein: Asymmetric Single-Slit Diffraction from a DIY Copper–Steel Slit</a></li>
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118247" target="_blank" rel="noopener">DIY Project Supporting Einstein: Reply to the MIT Team</a></li>
+  </ul>
 
-    <h3 class="mt-3 font-medium">Discrete Reinterpretation of Young’s Experiment</h3>
-    <ul class="list-disc pl-6 mt-1 text-sm">
-      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118358" target="_blank" rel="noopener">Asymmetric Slit: Experimental Evidence for a Discrete Reinterpretation of Young’s Experiment</a></li>
-      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118347" target="_blank" rel="noopener">Trilogy of Young’s Double-Slit Experiment: Pre-Slit, In-Slit, and Post-Slit Dynamics</a></li>
-      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118293" target="_blank" rel="noopener">On Completing Young’s Double-Slit Experiment: Hyperbolic Nonlinearity and Fringe Count</a></li>
-    </ul>
+  <h3 class="mt-3 font-medium">Cats, Birthdays, and Redshift</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17138575" target="_blank" rel="noopener">Three Versions of Schrödinger’s Cat</a></li>
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17139252" target="_blank" rel="noopener">The Birthday of Waves and Photons: Doppler, Redshift, Lightspeed, and Dimensional Forces</a></li>
+  </ul>
 
-    <h3 class="mt-3 font-medium">DIY & Evidence for Einstein</h3>
-    <ul class="list-disc pl-6 mt-1 text-sm">
-      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17059754" target="_blank" rel="noopener">Supporting Einstein: Asymmetric Single-Slit Diffraction from a DIY Copper–Steel Slit</a></li>
-      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17118247" target="_blank" rel="noopener">DIY Project Supporting Einstein: Reply to the MIT Team</a></li>
-    </ul>
+  <h3 class="mt-3 font-medium">Define Ether</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17144468" target="_blank" rel="noopener">Electromagnetic Ether: Total Effects of Electric Charges and Applications to Gravity and Light</a></li>
+  </ul>
 
-    <h3 class="mt-3 font-medium">Cats, Birthdays, and Redshift</h3>
-    <ul class="list-disc pl-6 mt-1 text-sm">
-      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17138575" target="_blank" rel="noopener">Three Versions of Schrödinger’s Cat</a></li>
-      <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17139252" target="_blank" rel="noopener">The Birthday of Waves and Photons: Doppler, Redshift, Lightspeed, and Dimensional Forces</a></li>
-    </ul>
+  <h3 class="mt-3 font-medium">Define Gravity</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17144630" target="_blank" rel="noopener">Electromagnetic Gravity: Total Effects of Electrons, Positrons, and Magnetism</a></li>
+  </ul>
 
-    <p class="mt-4 text-sm"><a class="text-sky-700 underline" href="#">Back to top</a></p>
-  </section>
+  <h3 class="mt-3 font-medium">Define Mathematics</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17153517" target="_blank" rel="noopener">Mathematics, From Nothing to Everything</a></li>
+  </ul>
+
+  <h3 class="mt-3 font-medium">History’s Pendulum</h3>
+  <ul class="list-disc pl-6 mt-1 text-sm">
+    <li><a class="text-sky-700 underline" href="https://zenodo.org/records/17230541" target="_blank" rel="noopener">Human Intelligence and AI, the Languages Perspective of Ear and Eye</a></li>
+  </ul>
+
+  <p class="mt-4 text-sm"><a class="text-sky-700 underline" href="#">Back to top</a></p>
+</section>
 
 </main>
 
@@ -475,6 +528,6 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c15688fba7be4bf7992ebe1b29be4efc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
